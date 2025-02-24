@@ -1,56 +1,53 @@
-import { useState } from "react";
-import { Button } from "../components/ui/button";
-import { Card, CardContent } from "../components/ui/card";
-import { Input } from "../components/ui/input";
-import { Mail, Phone, MapPin, Menu, X, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../../src/assets/css/LandingPage.css"; 
-import "../../src/assets/css/Slideshow.css"; 
-import logo from "../../src/assets/images/logo.png";
-import logo1 from "../../src/assets/images/logo1.png";
-import { Link } from "react-router-dom";
-// import Navbar from "../components/Navbar";
-// import Footer from "../components/Footer";
 
-const Slideshow = () => {
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 1000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        arrows: false,
+import Card from 'react-bootstrap/Card';
+import CardGroup from 'react-bootstrap/CardGroup';
+
+const Gallery = () => {
+  return (
+    <CardGroup>
+      <Card>
+        <Card.Img variant="top" src="../../src/assets/images/6.png" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This content is a little bit longer.
+          </Card.Text>
+          
+          
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This card has supporting text below as a natural lead-in to
+            additional content.
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+      <Card>
+        <Card.Img variant="top" src="holder.js/100px160" />
+        <Card.Body>
+          <Card.Title>Card title</Card.Title>
+          <Card.Text>
+            This is a wider card with supporting text below as a natural lead-in
+            to additional content. This card has even longer content than the
+            first to show that equal height action.
+          </Card.Text>
+        </Card.Body>
+        <Card.Footer>
+          <small className="text-muted">Last updated 3 mins ago</small>
+        </Card.Footer>
+      </Card>
+    </CardGroup>
+      );
     };
-    
-    return (
-      <div className="font-sans text-black bg-white">
-
-{/* Newsletter Section */}
-<section className="newsletter">
-  <div className="newsletter-container">
-    {/* Left Side - Text */}
-    <div className="newsletter-text">
-      <h2>Subscribe to Our Newsletter</h2>
-      <p>Stay updated with our latest blog posts and design tips.</p>
-    </div>
-
-    {/* Right Side - Form */}
-    <div className="newsletter-form">
-      <label htmlFor="email"><b>Email</b></label>
-      <input type="email" id="email" placeholder="Enter your email" />
-      <p className="privacy-text">We respect your privacy</p>
-      <button>Subscribe</button>
-    </div>
-  </div>
-</section>
-
-
-    </div>
-
-  );
-};
-export default Slideshow;
+    export default Gallery;

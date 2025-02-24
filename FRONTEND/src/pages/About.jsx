@@ -10,9 +10,12 @@ import "../../src/assets/css/about.css";
         <div className="font-sans text-black bg-white">
           {/* Hero Section */}
           
-          <section className="hero">
-            <section className="hero-content"></section>
-          </section>
+          <div className="image-container">
+          <img
+                src={`../src/assets/images/4.png`}
+                className="image"
+              />
+          </div>
           {/* About Us Section */}
           <section className="about-us">
             <div className="about-content">
