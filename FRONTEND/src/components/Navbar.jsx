@@ -3,6 +3,7 @@ import { Button } from "./ui/button";
 import logo from "../assets/images/logo.png";
 import "../../src/assets/css/LandingPage.css"; 
 import "../../src/assets/css/Slideshow.css"; 
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
@@ -11,18 +12,42 @@ const Navbar = () => {
         <img src={logo} alt="Aesthetica Logo" className="h-10" />
       </div>
       <ul className="flex space-x-6 font-medium">
-        <li><Link to="/">Home</Link></li>                    
-        <li><Link to="/about">About Us</Link></li>
-        <li><Link to="/blog">Blog</Link></li>
-        <li><Link to="/gallery">Gallery</Link></li>
-        <li><Link to="/career">Career</Link></li>
-        <li><Link to="/contact">Contact</Link></li>
+        <li>
+          <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
+            Home
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/about" className={({ isActive }) => (isActive ? "active" : "")}>
+            About
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/gallery" className={({ isActive }) => (isActive ? "active" : "")}>
+            Gallery
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/blog" className={({ isActive }) => (isActive ? "active" : "")}>
+            Blog
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/career" className={({ isActive }) => (isActive ? "active" : "")}>
+            Career
+          </NavLink>
+        </li>
+        <li>
+          <NavLink to="/contact" className={({ isActive }) => (isActive ? "active" : "")}>
+            Contact
+          </NavLink>
+        </li>
       </ul>
       <div className="space-x-3">
-        <Button asChild variant="outline" className="px-4 py-2 text-gray-800 border border-gray-500 rounded-lg">
+        <Button variant="outline" className="px-4 py-2 text-gray-800 border border-gray-500 rounded-lg sn">
           <Link to="/login">Sign In</Link>
         </Button>
-        <Button asChild className="px-4 py-2 text-white bg-black rounded-lg">
+        <Button className="px-4 py-2 text-white bg-black rounded-lg rg">
           <Link to="/register">Register</Link>
         </Button>
       </div>

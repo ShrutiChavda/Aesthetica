@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, Instagram, Youtube, Linkedin, X } from "lucide-react";
 import logo1 from "../assets/images/logo1.png";
-
+import "../../src/assets/css/LandingPage.css"; 
+import "../../src/assets/css/Slideshow.css"; 
 const Footer = () => {
   return (
     <footer className="p-6 bg-gray-100 footer">
@@ -9,8 +10,8 @@ const Footer = () => {
         {/* Left Section - Logo & Social Media */}
         <div className="footer-brand">
           <img src={logo1} alt="Aesthetica Logo" className="h-12 mb-4 footer-logo" />
-          <div className="flex space-x-4">
-            <X className="social-icon" />   
+          <div className="flex space-x-4 social-icons">
+            <X className="social-icon" /> 
             <Instagram className="social-icon" />
             <Youtube className="social-icon" />
             <Linkedin className="social-icon" />

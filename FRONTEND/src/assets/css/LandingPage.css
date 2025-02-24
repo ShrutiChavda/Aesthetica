@@ -13,6 +13,13 @@ a {
   color: inherit !important; /* Use parent text color */
 }
 
+body, html {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
 /* button{
   color: rgb(0, 0, 0);
   border: 1px solid black;
@@ -42,6 +49,12 @@ a {
   color: rgb(47, 44, 44);
   border-bottom: 2px solid rgb(0, 0, 0);
 
+}
+
+.navbar ul li .active {
+  color: rgb(47, 44, 44);
+  border-bottom: 2px solid rgb(0, 0, 0);
+  padding-bottom: 11px;
 }
 
 .sn{
@@ -80,6 +93,12 @@ a {
     font-weight: 100;
     font-size: inherit;
     padding: 5px;
+    }
+
+    .navbar ul li .active {
+      color: rgb(47, 44, 44);
+      border-bottom: 2px solid rgb(0, 0, 0);
+      padding-bottom: 6px;
     }
 }
 
@@ -120,6 +139,11 @@ a {
     padding: 2px;
     font-size: smaller;
   }
+  .navbar ul li .active {
+    color: rgb(47, 44, 44);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-bottom: 3px;
+  }
 }
 
 @media (max-width: 429px) {
@@ -145,6 +169,11 @@ a {
     font-size: small;
     padding: 1px 5px;
   }
+  .navbar ul li .active {
+    color: rgb(47, 44, 44);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-bottom: 3px;
+  }
 }
 @media (max-width: 330px) {
   .navbar ul li{
@@ -155,6 +184,11 @@ a {
   }
   #b1{
     font-size: small;
+  }
+  .navbar ul li .active {
+    color: rgb(47, 44, 44);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    padding-bottom: 6px;
   }
 }
 
@@ -176,8 +210,6 @@ a {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 }
-
-
 
 /* Hero Section */
 .hero {
@@ -307,6 +339,7 @@ a {
   width: 100%;
   gap: 40px;
   align-items: center;
+  margin: 10px 10px 10px 40px;
 }
 
 .newsletter-text h2 {
