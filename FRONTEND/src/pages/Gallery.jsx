@@ -14,7 +14,6 @@ const Gallery = () => {
             to additional content. This content is a little bit longer.
           </Card.Text>
           
-          
         </Card.Body>
         <Card.Footer>
           <small className="text-muted">Last updated 3 mins ago</small>

@@ -244,6 +244,94 @@ body, html {
   background: rgba(0, 0, 0, 0.7); /* Darkens on hover for interactivity */
 }
 
+/* Gallery Container (Responsive) */
+/* .gallery-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 20px;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+} */
+
+.gallery-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 0px;
+  padding: 20px;
+  white-space: nowrap;
+  scroll-snap-type: x mandatory;
+}
+  /* Styling for images */
+  .gallery-container img {
+      /* width: 700px; */
+      width:55%;
+      height: 345px;
+      border-radius: 30px;
+      object-fit: cover;
+      scroll-snap-align: start;
+      padding: 10px;
+    
+  }
+
+  @media (max-width: 1326px) {
+    .gallery-container img {
+      /* width: 700px; */
+      width:50%;
+      height: 345px;
+      padding: 10px;
+  }
+}
+@media (max-width: 1140px) {
+  .gallery-container img {
+    width:50%;
+    height: 300px;
+    padding: 10px;
+}
+}
+@media (max-width: 832px) {
+  .gallery-container img {
+    width:50%;
+    height: 250px;
+    padding: 10px;
+}
+}
+@media (max-width: 678px) {
+  .gallery-container img {
+    width:50%;
+    height: 200px;
+    padding: 10px;
+}
+}
+@media (max-width: 470px) {
+  .gallery-container img {
+    width:50%;
+    height: 190px;
+    padding: 10px;
+}
+}
+@media (max-width: 380px) {
+  .gallery-container img {
+    width:50%;
+    height: 140px;
+    padding: 8px;
+    border-radius: 20px;
+}
+}
+@media (max-width: 300px) {
+  .gallery-container img {
+    width:50%;
+    height: 100px;
+    padding: 8px;
+    border-radius: 20px;
+}
+}
+
+
+  /* Hide scrollbar for a cleaner look */
+  .gallery-container::-webkit-scrollbar {
+      display: none;
+  }
 
 /* Services Section */
 .services {
@@ -261,6 +349,18 @@ body, html {
   grid-template-columns: repeat(3, 1fr);
   gap: 45px;
   margin-top: 20px;
+}
+
+/* Card Hover Effect */
+.services .card {
+  background-color: white;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.services .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 @media (min-width: 825px) {
@@ -320,7 +420,7 @@ body, html {
   border-radius: 10px;
   padding: 20px;
   background: #ffffff;
-  box-shadow: 0 5px 2px 3px rgb(53 40 40 / 12%);
+  box-shadow: 0px 4px 3px 2px rgb(53 40 40 / 12% );
 }
 
 /* Newsletter Section */

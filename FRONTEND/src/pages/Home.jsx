@@ -43,22 +43,15 @@ const Slideshow = () => {
           ))}
         </Slider>
       </div>
-  {/* table row containing 2 images */}
-  <div className="flex justify-center">
-    <div className="flex flex-col items-center">
-      <img
-        src={`../src/assets/images/5.png`}
-        alt={`Interior 1`}
-        className="w"
-      />
-      <img
-        src={`../src/assets/images/6.png`}
-        alt={`Interior 2`}
-        className="w"
-      />
-    </div>
-
-  </div>
+      
+{/* Gallery Section */}
+   <div className="gallery-container">
+       <img src={`../src/assets/images/5.png`} alt={`Image 1`}/>
+       <img src={`../src/assets/images/6.png`} alt={`Image 2`}/>
+       <img src={`../src/assets/images/5.png`} alt={`Image 3`}/>
+       <img src={`../src/assets/images/6.png`} alt={`Image 4`}/>
+   </div>
+   
 {/* Services Section */}
 <section className="services">
   <h3 className="text-2xl font-bold text-gray-800" id="title"><b>Services</b></h3>
@@ -93,7 +86,7 @@ const Slideshow = () => {
         description: "We're always looking for talented people to join our team! Check out our Careers page for information on job openings and opportunities to work with us. Whether you're looking for a full-time role or an internship."
       }
     ].map((service) => (
-      <Card key={service.title} className="bg-white rounded-lg shadow-gray">
+      <Card key={service.title} className="bg-white rounded-lg shadow-gray card">
         <CardContent className="p-6">
           <h4 className="font-semibold text-black-700">{service.title}</h4>
           <p className="text-gray-600">{service.description}</p>
@@ -102,7 +95,6 @@ const Slideshow = () => {
     ))}
   </div>
 </section>
-
 
 {/* Newsletter Section */}
 <section className="newsletter">
