@@ -1,3 +1,35 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Keep space between logo & links */
+  align-items: center;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+/* Move the navigation links and buttons to the right */
+.nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%; /* Push content to the right */
+}
+
+/* Ensure list items are properly spaced */
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Adjust sign-in and sign-up button spacing */
+.sn, .rg {
+  margin-left: 10px;
+}
+
 /* Navbar Styles */
 .navbar {
   display: flex;

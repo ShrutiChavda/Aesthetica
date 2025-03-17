@@ -63,7 +63,6 @@ const Blog = () => {
   return (
     <div className="font-sans text-black bg-white">
       {/* Navbar */}
-      {/* <Navbar /> */}
 
       {/* Featured Products */}
       <section className="featured-products">
@@ -115,8 +114,6 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <Footer />
     </div>
   );
 };
