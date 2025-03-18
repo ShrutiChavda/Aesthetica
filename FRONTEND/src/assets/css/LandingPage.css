@@ -19,7 +19,10 @@ body, html {
   padding: 0;
 }
 
-
+.auth-buttons {
+  margin-left: auto; /* Pushes the buttons to the right */
+  display: flex;
+}
 /* button{
   color: rgb(0, 0, 0);
   border: 1px solid black;
@@ -69,11 +72,11 @@ body, html {
 
 .rg{
   color: rgb(255, 255, 255);
-  border: 1px solid rgb(0, 0, 0);
   background-color: black;
   padding: 5px 10px;
   border-radius: 5px;
   font-size: larger;
+  margin: 10px 10px 10px 10px;
 }
 
 @media (max-width: 788px) {
@@ -101,6 +104,7 @@ body, html {
       padding-bottom: 6px;
     }
 }
+
 
 @media (max-width: 595px) {
   .navbar ul {

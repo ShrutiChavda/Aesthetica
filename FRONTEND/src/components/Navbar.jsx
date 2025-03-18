@@ -4,7 +4,6 @@ import logo from "../assets/images/logo.png";
 import "../../src/assets/css/LandingPage.css";
 import "../../src/assets/css/Slideshow.css";
 import { NavLink } from "react-router-dom";
-
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between p-4 bg-white shadow-md navbar">
@@ -43,15 +42,15 @@ const Navbar = () => {
           </NavLink>
         </li>
       </ul>
-      <div>
-        <div className="space-x-3">
-          <Button variant="outline" className="px-4 py-2 text-gray-800 border border-gray-500 rounded-lg sn">
-            <Link to="/login">Sign In</Link>
-          </Button>
-          <Button className="px-4 py-2 text-white bg-black rounded-lg rg">
+      
+        <div className="auth-buttons">
+  <Button variant="outline" className="px-4 py-2 text-gray-800 border border-gray-500 rounded-lg sn">
+    <Link to="/login">Sign In</Link>
+  </Button>
+  <Button className="px-4 py-2 text-white bg-black rounded-lg rg">
             <Link to="/register">Register</Link>
           </Button>
-        </div>
+
       </div>
     </nav>
   );
