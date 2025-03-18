@@ -942,3 +942,137 @@ body, html {
     grid-template-columns: repeat(1, 1fr); /* 1 column on mobile */
   }
 }
+
+
+/* Carrer section */
+/* Global Styles */
+.career-container {
+  font-family: 'Arial', sans-serif;
+  color: black;
+  background-color: white;
+  padding: 20px;
+}
+
+/* Hero Section */
+.career-hero {
+  text-align: center;
+  padding: 50px 0;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* Career Advice Section */
+.career-advice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  gap: 20px;
+}
+
+.career-advice-text {
+  flex: 1;
+}
+
+.career-advice-text h2 {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.career-advice-text p {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.career-advice-image {
+  flex: 1;
+}
+
+.career-advice-image img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+}
+
+/* Blog Section */
+.career-blog {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 40px 0;
+}
+
+.blog-card {
+  width: 300px;
+  text-align: center;
+}
+
+.blog-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.blog-category {
+  display: inline-block;
+  background-color: black;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+/* Employee Testimonials */
+.employee-testimonials {
+  text-align: center;
+  padding: 40px;
+}
+
+.testimonial-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  width: 250px;
+  text-align: center;
+  padding: 20px;
+}
+
+.testimonial-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.view-all {
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .career-advice {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .career-blog {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .testimonial-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+}
