@@ -1,51 +1,67 @@
-import Card from 'react-bootstrap/Card';
-import CardGroup from 'react-bootstrap/CardGroup';
+import React, { useEffect, useRef } from "react";
+import "../../src/assets/css/Gallery.css"; // Custom CSS
+
+const slideshowImages = [
+  "../../src/assets/images/i1.jpg",
+  "../../src/assets/images/i2.jpg",
+  "../../src/assets/images/i3.jpg",
+  "../../src/assets/images/i4.jpg",
+  "../../src/assets/images/i5.jpg",
+  "../../src/assets/images/i1.jpg",
+  "../../src/assets/images/i2.jpg",
+  "../../src/assets/images/i3.jpg",
+];
+
+const gridImages = [
+  "../../src/assets/images/g1.jpg",
+  "../../src/assets/images/g2.jpg",
+  "../../src/assets/images/g3.jpg",
+  "../../src/assets/images/g4.jpg",
+  "../../src/assets/images/g1.jpg",
+  "../../src/assets/images/g2.jpg",
+];
 
 const Gallery = () => {
-  return (
-    <CardGroup>
-      <Card>
-        <Card.Img variant="top" src="../../src/assets/images/6.png" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This content is a little bit longer.
-          </Card.Text>
-          
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This card has supporting text below as a natural lead-in to
-            additional content.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-      <Card>
-        <Card.Img variant="top" src="holder.js/100px160" />
-        <Card.Body>
-          <Card.Title>Card title</Card.Title>
-          <Card.Text>
-            This is a wider card with supporting text below as a natural lead-in
-            to additional content. This card has even longer content than the
-            first to show that equal height action.
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">Last updated 3 mins ago</small>
-        </Card.Footer>
-      </Card>
-    </CardGroup>
-      );
+  const sliderRef = useRef(null);
+
+  useEffect(() => {
+    const scrollSlideshow = () => {
+      if (sliderRef.current) {
+        sliderRef.current.scrollLeft += 1;
+        if (sliderRef.current.scrollLeft >= sliderRef.current.scrollWidth - sliderRef.current.clientWidth) {
+          sliderRef.current.scrollLeft = 0;
+        }
+      }
     };
-    export default Gallery;
+    const interval = setInterval(scrollSlideshow, 30);
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="gallery-container">
+      <h2 className="gallery-title">Gallery</h2>
+
+      {/* Slideshow Section */}
+      <div className="slideshow-container" ref={sliderRef}>
+        <div className="slideshow">
+          {slideshowImages.concat(slideshowImages).map((src, index) => (
+            <div key={index} className="slide">
+              <img src={src} alt={`Slide ${index + 1}`} />
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Grid Layout Section */}
+      <div className="grid-container">
+        {gridImages.map((src, index) => (
+          <div key={index} className="grid-item">
+            <img src={src} alt={`Grid ${index + 1}`} />
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+export default Gallery;
