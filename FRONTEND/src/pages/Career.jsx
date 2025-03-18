@@ -27,9 +27,9 @@ const Career = () => {
 
  {/* Career Section */}
        {/* Hero Section */}
-       <section className="career-hero">
+       {/* <section className="career-hero">
         <h1>Career</h1>
-      </section>
+      </section> */}
 
       {/* Career Advice Section */}
       <section className="career-advice">
@@ -50,7 +50,7 @@ const Career = () => {
           <CardContent>
             <h3>10 Tips for a Successful Design Career</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <span className="blog-category">Career Advice</span>
+            <Button className="blog-category">Career Advice</Button>
           </CardContent>
         </Card>
         <Card className="blog-card">
@@ -58,7 +58,7 @@ const Career = () => {
           <CardContent>
             <h3>Navigating the Job Market in Interior Design</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            <span className="blog-category">Career Guidance</span>
+            <Button className="blog-category">Career Guidance</Button>
           </CardContent>
         </Card>
       </section>
