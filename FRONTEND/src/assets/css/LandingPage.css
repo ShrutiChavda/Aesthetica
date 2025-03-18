@@ -1,3 +1,13 @@
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Keep space between logo & links */
+  align-items: center;
+  padding: 10px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
 /* Move the navigation links and buttons to the right */
 .nav-links {
   display: flex;
@@ -6,12 +16,26 @@
   width: 100%; /* Push content to the right */
 }
 
+/* Ensure list items are properly spaced */
+.navbar ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Adjust sign-in and sign-up button spacing */
+.sn, .rg {
+  margin-left: 10px;
+}
+
 /* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  padding: 0px;
+  padding: 10px;
   background: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -201,13 +225,6 @@ body, html {
     color: rgb(47, 44, 44);
     border-bottom: 2px solid rgb(0, 0, 0);
     padding-bottom: 6px;
-  }
-  .nav-links{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    flex-direction: column;
   }
 }
 
@@ -979,12 +996,12 @@ body, html {
 }
 
 /* Hero Section */
-.career-hero {
+/* .career-hero {
   text-align: center;
   padding: 50px 0;
   font-size: 32px;
   font-weight: bold;
-}
+} */
 
 /* Career Advice Section */
 .career-advice {
