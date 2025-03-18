@@ -17,6 +17,10 @@ import article1 from "../../src/assets/images/article1.jpg"; // Images of articl
 import article2 from "../../src/assets/images/article2.jpg";
 import article3 from "../../src/assets/images/article3.jpg";
 
+import user1 from "../../src/assets/images/team1.png";   // Images of auther
+import user2 from "../../src/assets/images/team2.png";
+import user3 from "../../src/assets/images/team3.png";
+
 import logo from "../../src/assets/images/logo.png";
 import logo1 from "../../src/assets/images/logo1.png";
 import { Link } from "react-router-dom";
@@ -40,6 +44,7 @@ const Blog = () => {
       date: "March 10, 2025",
       author: "John Doe",
       img: article1,
+      image: user1,
       description: "Discover expert tips on selecting the perfect furniture to match your style and space.",
     },
     {
@@ -48,6 +53,7 @@ const Blog = () => {
       date: "March 8, 2025",
       author: "Emily Smith",
       img: article2,
+      image: user2,
       description: "Stay ahead of the latest design trends and transform your home with elegance.",
     },
     {
@@ -56,6 +62,7 @@ const Blog = () => {
       date: "March 5, 2025",
       author: "Michael Johnson",
       img: article3,
+      image: user3,
       description: "Learn how to make the most of your small living space with functional furniture ideas.",
     },
   ];
@@ -87,8 +94,11 @@ const Blog = () => {
               <img src={article.img} alt={article.title} />
               <div className="article-content">
                 <h3>{article.title}</h3>
-                <p className="date">{article.date} • <span className="author">By {article.author}</span></p>
                 <p className="description">{article.description}</p>
+                <div className="author">
+                  <img src={article.image} alt={article.author} />
+                  <span>{article.author}</span>
+                </div>
               </div>
             </div>
           ))}
