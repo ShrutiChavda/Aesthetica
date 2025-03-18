@@ -10,7 +10,6 @@ const Navbar = () => {
       <div className="flex items-center space-x-4">
         <img src={logo} alt="Aesthetica Logo" className="h-10" />
       </div>
-<<<<<<< HEAD
       <ul className="flex space-x-6 font-medium">
         <li>
           <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
