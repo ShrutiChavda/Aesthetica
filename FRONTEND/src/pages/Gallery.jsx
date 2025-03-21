@@ -38,7 +38,7 @@ const Gallery = () => {
   }, []);
 
   return (
-    <div className="gallery-container">
+    <div className="gallery-containerr">
       <h2 className="gallery-title">Gallery</h2>
 
       {/* Slideshow Section */}
