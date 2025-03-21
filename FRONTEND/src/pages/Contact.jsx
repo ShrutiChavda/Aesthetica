@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../src/assets/css/LandingPage.css"; 
-import "../../src/assets/css/contect.css"; 
+import "../../src/assets/css/contact.css"; 
 import logo from "../../src/assets/images/logo.png";
 import logo1 from "../../src/assets/images/logo1.png";
 import { Link } from "react-router-dom";

@@ -34,7 +34,7 @@
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  width: 97%;
   padding: 12px;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -50,6 +50,7 @@
 .form-actions {
   display: flex;
   justify-content: space-between;
+  gap: 10px;
 }
 
 /* Adjust button styles */
@@ -59,7 +60,7 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
-  width: 45%;
+  flex: 1;
 }
 
 .reset-btn {
@@ -92,6 +93,10 @@
   .contact-page {
     padding: 15px;
   }
+  .contact-form input,
+  .contact-form textarea {
+    width: 95%;
+  }
 
   .contact-form-container {
     width: 100%;
@@ -102,13 +107,15 @@
     flex-direction: column;
     gap: 10px;
   }
-
-  .reset-btn, 
-  .submit-btn {
-    width: 100%;
-  }
 }
 
+@media (max-width: 553px) {
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 95%;
+  }
+}
 @media (max-width: 480px) {
   .contact-page {
     padding: 10px;
@@ -118,15 +125,12 @@
     padding: 15px;
   }
 
-  .contact-form input,
-  .contact-form textarea {
-    font-size: 14px;
-    padding: 10px;
-  }
+  
 
   .reset-btn, 
   .submit-btn {
     padding: 10px;
     font-size: 14px;
+    width: 100%;
   }
 }
