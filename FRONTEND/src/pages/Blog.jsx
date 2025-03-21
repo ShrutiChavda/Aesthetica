@@ -91,12 +91,12 @@ const Blog = () => {
         <div className="article-grid">
           {articles.map((article) => (
             <div key={article.id} className="article-card">
-              <img src={article.img} alt={article.title} />
+              <img className="aaa" src={article.img} alt={article.title} />
               <div className="article-content">
                 <h3>{article.title}</h3>
                 <p className="description">{article.description}</p>
                 <div className="author">
-                  <img src={article.image} alt={article.author} />
+                  <img className="bbb" src={article.image} alt={article.author} />
                   <span>{article.author}</span>
                 </div>
               </div>

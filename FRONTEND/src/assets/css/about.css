@@ -337,6 +337,7 @@
  @media (max-width: 420px) {
   p{
     font-size:small;
+    text-align: center;
   }
   @media (max-width: 309px) {
     .team-card{
