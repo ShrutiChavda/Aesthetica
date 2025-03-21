@@ -42,7 +42,7 @@ const Gallery = () => {
       <h2 className="gallery-title">Gallery</h2>
 
       {/* Slideshow Section */}
-      <div className="slideshow-container" ref={sliderRef}>
+      <div className="slideshow-containerr" ref={sliderRef}>
         <div className="slideshow">
           {slideshowImages.concat(slideshowImages).map((src, index) => (
             <div key={index} className="slide">
@@ -55,7 +55,7 @@ const Gallery = () => {
       {/* Grid Layout Section */}
       <div className="grid-container">
         {gridImages.map((src, index) => (
-          <div key={index} className="grid-item">
+          <div key={index} className="grid-itemm">
             <img src={src} alt={`Grid ${index + 1}`} />
           </div>
         ))}
