@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 import { Input } from "../ui/input";
+import Navbar from "../Navbar";
 import { Mail, Phone, MapPin, Menu, X, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -24,6 +25,7 @@ const Career = () => {
 
   return (
     <div className="font-sans text-black bg-white">
+            <Navbar />  {/* Add Navbar Component Here */}
 
       {/* Career Section */}
       {/* Hero Section */}
@@ -39,13 +41,13 @@ const Career = () => {
           <Button className="read-more">Read More</Button>
         </div>
         <div className="career-advice-image">
-          <img src={careerImage} alt="Career Advice" />
+          <img src={careerImage} alt="Career Advice"/>
         </div>
       </section>
 
       {/* Blog Section */}
       <section className="career-blog">
-        <Card className="blog-card">
+        <Card className="blog-card1">
           <img src={careerImage} alt="Career Tip" />
           <CardContent>
             <h3>10 Tips for a Successful Design Career</h3>
@@ -53,7 +55,7 @@ const Career = () => {
             <Button className="blog-category">Career Advice</Button>
           </CardContent>
         </Card>
-        <Card className="blog-card">
+        <Card className="blog-card1">
           <img src={careerImage} alt="Job Market" />
           <CardContent>
             <h3>Navigating the Job Market in Interior Design</h3>
@@ -69,7 +71,7 @@ const Career = () => {
         <p>Discover what our team members have to say about working with us</p>
         <Button className="view-all">View All Reviews</Button>
         <br /><br /><br />
-        <div className="testimonial-grid">
+        <div className="testimonial-grid1">
           <Card className="testimonial-card">
             <img src={user1} alt="John Doe" className="testimonial-img" />
             <CardContent>

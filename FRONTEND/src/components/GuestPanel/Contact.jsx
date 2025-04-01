@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 import { Input } from "../ui/input";
+import Navbar from "../Navbar";
 import { Mail, Phone, MapPin, Menu, X, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -49,6 +50,7 @@ const Contact = () => {
 
   return (
     <div className="font-sans text-black bg-white">
+            <Navbar />  {/* Add Navbar Component Here */}
 
       {/* Contact Section */}
       <div className="contact-page">

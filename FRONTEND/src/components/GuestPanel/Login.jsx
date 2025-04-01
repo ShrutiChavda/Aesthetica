@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "../ui/button";
 import { Card, CardContent } from "../ui/card";
 import { Input } from "../ui/input";
+import Navbar from "../Navbar";
 import { Mail, Phone, MapPin, Menu, X, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
@@ -17,7 +18,11 @@ import "../../assets/css/login.css";
 
 const Login = () => {
   return (
+        <div className="font-sans text-black bg-white">
+    <Navbar /> 
+    <br /><br />
     <div className="login-container">
+
       <h1 className="login-title">Login</h1>
       <p className="login-subtitle">Enter your credentials to access your account</p>
       
@@ -40,12 +45,7 @@ const Login = () => {
         </div>
       </form>
     </div>
-  );
-};
-
-
-    <div className="font-sans text-black bg-white">
-
+<br /><br /><br />
       {/* Newsletter Section */}
       <section className="newsletter">
         <div className="newsletter-container">
@@ -64,8 +64,10 @@ const Login = () => {
           </div>
         </div>
       </section>
-
-
     </div>
+    
+  );
+};
+
 
 export default Login;

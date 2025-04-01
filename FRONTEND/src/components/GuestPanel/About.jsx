@@ -4,10 +4,14 @@ import { Card, CardContent } from "../ui/card";
 import { Input } from "../ui/input";
 import "../../assets/css/LandingPage.css";
 import "../../assets/css/about.css";
+import Navbar from "../Navbar";
+
 
 const About = () => {
   return (
     <div className="font-sans text-black bg-white">
+            <Navbar />  {/* Add Navbar Component Here */}
+
       {/* Hero Section */}
 
       {/* <div className="image-container">

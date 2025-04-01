@@ -28,6 +28,7 @@ import Navbar from "../Navbar";
 import Footer from "../Footer";
 
 const Blog = () => {
+
   const products = [
     { id: 1, name: "Elegance Sofa Set", price: "₹84550", img: sofa },
     { id: 2, name: "Luxury Coffee Table", price: "₹8500", img: table },
@@ -69,7 +70,7 @@ const Blog = () => {
 
   return (
     <div className="font-sans text-black bg-white">
-      {/* Navbar */}
+  <Navbar />
 
       {/* Featured Products */}
       <section className="featured-products">

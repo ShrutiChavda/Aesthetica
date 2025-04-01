@@ -1150,12 +1150,26 @@ body, html {
   justify-content: center;
   gap: 20px;
 }
+.testimonial-grid1 {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 20px;
+}
 
 .testimonial-card {
   width: 100%;
   text-align: center;
 }
 
+  @media screen and (max-width: 578px) {
+    .testimonial-grid1 {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+  }
 /* Newsletter Section */
 /* .newsletter {
   background: #f8f9fa;
@@ -1220,7 +1234,10 @@ body, html {
     align-items: center;
   }
 }
-
+.blog-card1 {
+  width: 90%;
+  text-align: center;
+}
 
 @media (max-width: 260px){
   .newsletter{

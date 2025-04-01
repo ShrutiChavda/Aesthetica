@@ -7,6 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../assets/css/LandingPage.css";
+import Navbar from "../Navbar";
 import "../../assets/css/Slideshow.css";
 import logo from "../../assets/images/logo.png";
 import logo1 from "../../assets/images/logo1.png";
@@ -35,6 +36,7 @@ const ForgotPassword = () => {
 };
 
 <div className="font-sans text-black bg-white">
+<Navbar />  {/* Add Navbar Component Here */}
 
 {/* Newsletter Section */}
 <section className="newsletter">

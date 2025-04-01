@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import Navbar from "../Navbar";
 import "../../assets/css/Gallery.css"; // Custom CSS
 import i1 from "../../assets/images/i1.jpg";
 import i2 from "../../assets/images/i2.jpg";
@@ -33,7 +34,12 @@ const Gallery = () => {
   }, []);
 
   return (
+    <div className="font-sans text-black bg-white">
+
+    <Navbar />  {/* Add Navbar Component Here */}
+
     <div className="gallery-containerr">
+
       <h2 className="gallery-title">Gallery</h2>
 
       {/* Slideshow Section */}
@@ -74,6 +80,7 @@ const Gallery = () => {
           </div>
         </div>
       </section>
+    </div>
     </div>
   );
 };

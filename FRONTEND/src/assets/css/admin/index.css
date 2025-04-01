@@ -1,0 +1,244 @@
+/* index.css */
+
+.dashboard-container {
+  padding: 20px;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 24%;
+}
+
+.stat-value {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.stat-change {
+  font-size: 0.8em;
+  color: green;
+  margin-left: 5px;
+}
+
+.blog-posts-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.blog-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.new-post-btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.blog-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.blog-table th,
+.blog-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.blog-table th {
+  background: #f8f9fa;
+}
+
+.published {
+  background: lightgreen;
+  color: green;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.draft {
+  background: lightyellow;
+  color: orange;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.categories-budget-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.categories-container,
+.budget-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 49%;
+}
+
+.categories-header,
+.budget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.category {
+  margin-bottom: 10px;
+}
+
+.projects {
+  color: #999;
+  margin-left: 5px;
+}
+
+.projects-container {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.project-name {
+  width: 200px;
+}
+
+.progress-bar {
+  width: 70%;
+  background: #eee;
+  border-radius: 10px;
+  height: 20px;
+  margin-right: 10px;
+}
+
+.progress {
+  background: #007bff;
+  height: 20px;
+  border-radius: 10px;
+}
+
+.progress-percentage {
+  width: 50px;
+}
+
+.footer {
+  display: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .stats-container,
+  .categories-budget-container {
+    flex-direction: column; /* Stack elements vertically */
+  }
+
+  .stat-card,
+  .categories-container,
+  .budget-container {
+    width: 100%; /* Take full width */
+    margin-bottom: 15px;
+  }
+
+  .project {
+    flex-direction: column; /* Stack project elements */
+    align-items: flex-start; /* Align left */
+  }
+
+  .project-name,
+  .progress-bar,
+  .progress-percentage {
+    width: 100%; /* Full width for stacked elements */
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-table th:nth-child(4), /* Hide Date */
+  .blog-table td:nth-child(4),
+  .blog-table th:nth-child(5), /* Hide Actions */
+  .blog-table td:nth-child(5) {
+    display: none;
+  }
+
+  .blog-table th,
+  .blog-table td {
+    padding: 8px 10px; /* Reduce padding */
+  }
+
+  .stat-value {
+    font-size: 1.2em; /* Smaller font */
+  }
+
+  .stat-change {
+    font-size: 0.7em; /* Smaller font */
+  }
+}
+
+@media (max-width: 320px) {
+  .blog-table th:nth-child(3), /* Hide Status */
+  .blog-table td:nth-child(3) {
+    display: none;
+  }
+}
+
+@media (max-width: 200px) {
+  .blog-table th:nth-child(2), /* Hide Author */
+  .blog-table td:nth-child(2) {
+    display: none;
+  }
+
+  .blog-table th:nth-child(1), /* Make Title take full width */
+  .blog-table td:nth-child(1) {
+    width: 100%;
+  }
+
+  .blog-table th,
+  .blog-table td {
+    padding: 5px; /* Further reduce padding */
+  }
+
+  .stat-value {
+    font-size: 1em; /* Even smaller font */
+  }
+
+  .stat-change {
+    display: block; /* Stack on new line */
+    margin-left: 0;
+    font-size: 0.6em; /* Very small font */
+  }
+
+  .new-post-btn {
+    padding: 5px 10px; /* Smaller button */
+    font-size: 0.8em;
+  }
+}
