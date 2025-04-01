@@ -7,22 +7,22 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../src/assets/css/LandingPage.css";
-import sofa from "../../src/assets/images/sofa.png";  //Images of Featured products
-import table from "../../src/assets/images/table.png";
-import rug from "../../src/assets/images/rug.png";
-import mirror from "../../src/assets/images/mirror.jpg";
-import watch from "../../src/assets/images/watch.jpg";
-import lamp from "../../src/assets/images/lamp.jpg";
-import article1 from "../../src/assets/images/article1.jpg"; // Images of article
-import article2 from "../../src/assets/images/article2.jpg";
-import article3 from "../../src/assets/images/article3.jpg";
+import sofa from "../../assets/images/sofa.png";  //Images of Featured products
+import table from "../../assets/images/table.png";
+import rug from "../../assets/images/rug.png";
+import mirror from "../../assets/images/mirror.jpg";
+import watch from "../../assets/images/watch.jpg";
+import lamp from "../../assets/images/lamp.jpg";
+import article1 from "../../assets/images/article1.jpg"; // Images of article
+import article2 from "../../assets/images/article2.jpg";
+import article3 from "../../assets/images/article3.jpg";
 
-import user1 from "../../src/assets/images/team1.png";   // Images of auther
-import user2 from "../../src/assets/images/team2.png";
-import user3 from "../../src/assets/images/team3.png";
+import user1 from "../../assets/images/team1.png";   // Images of auther
+import user2 from "../../assets/images/team2.png";
+import user3 from "../../assets/images/team3.png";
 
-import logo from "../../src/assets/images/logo.png";
-import logo1 from "../../src/assets/images/logo1.png";
+import logo from "../../assets/images/logo.png";
+import logo1 from "../../assets/images/logo1.png";
 import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
