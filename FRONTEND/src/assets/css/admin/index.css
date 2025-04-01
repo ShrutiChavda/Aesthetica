@@ -1,6 +1,12 @@
 .dashboard-container {
   padding: 20px;
 }
+.active{
+  background-color: #ffffff;
+  color: #ffffff;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
 
 .stats-container {
   display: flex;
