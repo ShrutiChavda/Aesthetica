@@ -33,7 +33,7 @@ function Sidebar() {
 
         <div className="profile-container">
   <img 
-    src="src/assets/images/profile.png" 
+    src="../src/assets/images/profile.png" 
     alt="User Profile" 
     className="profile-image" 
   />
@@ -47,55 +47,43 @@ function Sidebar() {
 <br />
         <ul>
           <li>
-            <NavLink
-              to="/admin"
-              className={({ isActive }) => (isActive ? "active" : "")}
+            <NavLink to="/admin/index" end className={({ isActive }) => (isActive ? "active" : "")}
             >
               <i className="bi bi-house-door"></i> Dashboard
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/admin/blog"
-              className={({ isActive }) => (isActive ? "active" : "")}
+            <NavLink to="/admin/blog" end className={({ isActive }) => (isActive ? "active" : "")}
             >
               <i className="bi bi-pencil-square"></i> Blog Management
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/admin/budget"
-              className={({ isActive }) => (isActive ? "active" : "")}
+            <NavLink to="/admin/budget" end className={({ isActive }) => (isActive ? "active" : "")}
             >
               <i className="bi bi-cash-stack"></i> Budget Management
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/admin/room"
-              className={({ isActive }) => (isActive ? "active" : "")}
+            <NavLink to="/admin/room" end className={({ isActive }) => (isActive ? "active" : "")}
             >
               <i className="bi bi-building"></i> Room Projects
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/admin/career"
-              className={({ isActive }) => (isActive ? "active" : "")}
+            <NavLink to="/admin/career" end className={({ isActive }) => (isActive ? "active" : "")}
             >
               <i className="bi bi-briefcase"></i> Careers
             </NavLink>
           </li>
           <li>
-            <NavLink
-              to="/admin/settings"
-              className={({ isActive }) => (isActive ? "active" : "")}
+            <NavLink to="/admin/settings" end className={({ isActive }) => (isActive ? "active" : "")}
             >
               <i className="bi bi-gear"></i> Settings
             </NavLink>
           </li>
           <li>
-            <Link to="/logout" className="logout">
+            <Link to="/logout" end className="logout">
               <i className="bi bi-box-arrow-right"></i> Logout
             </Link>
           </li>

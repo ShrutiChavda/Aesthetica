@@ -9,6 +9,11 @@
   justify-content: space-between;
   margin-bottom: 20px;
 }
+.main-content {
+  margin-left: 3px;
+  padding: 20px;
+  width: 100%;
+}
 
 .stat-card {
   background: #fff;
@@ -180,6 +185,12 @@
     width: 100%; /* Full width for stacked elements */
     margin-bottom: 5px;
   }
+  .main-content {
+    margin-left: 3px;
+    padding: 20px;
+    width: 100%;
+  }  
+  
 }
 
 @media (max-width: 480px) {
