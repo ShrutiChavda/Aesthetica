@@ -1,33 +1,33 @@
 import { useState } from "react";
-import { Button } from "../components/ui/button";
-import { Card, CardContent } from "../components/ui/card";
-import { Input } from "../components/ui/input";
+import { Button } from "../ui/button";
+import { Card, CardContent } from "../ui/card";
+import { Input } from "../ui/input";
 import { Mail, Phone, MapPin, Menu, X, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../src/assets/css/LandingPage.css"; 
-import "../../src/assets/css/Slideshow.css"; 
-import logo from "../../src/assets/images/logo.png";
-import logo1 from "../../src/assets/images/logo1.png";
+import "../../assets/css/LandingPage.css";
+import "../../assets/css/Slideshow.css";
+import logo from "../../assets/images/logo.png";
+import logo1 from "../../assets/images/logo1.png";
 import { Link } from "react-router-dom";
 // import Navbar from "../components/Navbar";
 // import Footer from "../components/Footer";
-import careerImage from "../../src/assets/images/career.jpg";    //Images for career section
-import user1 from "../../src/assets/images/team1.png";
-import user2 from "../../src/assets/images/team2.png";
-import user3 from "../../src/assets/images/team3.png";
+import careerImage from "../../assets/images/career.jpg";    //Images for career section
+import user1 from "../../assets/images/team1.png";
+import user2 from "../../assets/images/team2.png";
+import user3 from "../../assets/images/team3.png";
 
 
 const Career = () => {
-    
-    
-    return (
-      <div className="font-sans text-black bg-white">
 
- {/* Career Section */}
-       {/* Hero Section */}
-       {/* <section className="career-hero">
+
+  return (
+    <div className="font-sans text-black bg-white">
+
+      {/* Career Section */}
+      {/* Hero Section */}
+      {/* <section className="career-hero">
         <h1>Career</h1>
       </section> */}
 
@@ -93,25 +93,25 @@ const Career = () => {
           </Card>
         </div>
       </section>
-     
-{/* Newsletter Section */}
-<section className="newsletter">
-  <div className="newsletter-container">
-    {/* Left Side - Text */}
-    <div className="newsletter-text">
-      <h2>Subscribe to Our Newsletter</h2>
-      <p>Stay updated with our latest blog posts and design tips.</p>
-    </div>
 
-    {/* Right Side - Form */}
-    <div className="newsletter-form">
-      <label htmlFor="email"><b>Email</b></label>
-      <input type="email" id="email" placeholder="Enter your email" />
-      <p className="privacy-text">We respect your privacy</p>
-      <button>Subscribe</button>
-    </div>
-  </div>
-</section>
+      {/* Newsletter Section */}
+      <section className="newsletter">
+        <div className="newsletter-container">
+          {/* Left Side - Text */}
+          <div className="newsletter-text">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with our latest blog posts and design tips.</p>
+          </div>
+
+          {/* Right Side - Form */}
+          <div className="newsletter-form">
+            <label htmlFor="email"><b>Email</b></label>
+            <input type="email" id="email" placeholder="Enter your email" />
+            <p className="privacy-text">We respect your privacy</p>
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </section>
 
 
     </div>

@@ -1,24 +1,24 @@
 import React, { useEffect, useRef } from "react";
-import "../../src/assets/css/Gallery.css"; // Custom CSS
+import "../../assets/css/Gallery.css"; // Custom CSS
 
 const slideshowImages = [
-  "../../src/assets/images/i1.jpg",
-  "../../src/assets/images/i2.jpg",
-  "../../src/assets/images/i3.jpg",
-  "../../src/assets/images/i4.jpg",
-  "../../src/assets/images/i5.jpg",
-  "../../src/assets/images/i1.jpg",
-  "../../src/assets/images/i2.jpg",
-  "../../src/assets/images/i3.jpg",
+  "../../assets/images/i1.jpg",
+  "../../assets/images/i2.jpg",
+  "../../assets/images/i3.jpg",
+  "../../assets/images/i4.jpg",
+  "../../assets/images/i5.jpg",
+  "../../assets/images/i1.jpg",
+  "../../assets/images/i2.jpg",
+  "../../assets/images/i3.jpg",
 ];
 
 const gridImages = [
-  "../../src/assets/images/g1.jpg",
-  "../../src/assets/images/g2.jpg",
-  "../../src/assets/images/g3.jpg",
-  "../../src/assets/images/g4.jpg",
-  "../../src/assets/images/g1.jpg",
-  "../../src/assets/images/g2.jpg",
+  "../../assets/images/g1.jpg",
+  "../../assets/images/g2.jpg",
+  "../../assets/images/g3.jpg",
+  "../../assets/images/g4.jpg",
+  "../../assets/images/g1.jpg",
+  "../../assets/images/g2.jpg",
 ];
 
 const Gallery = () => {
@@ -62,23 +62,23 @@ const Gallery = () => {
       </div>
 
       {/* Newsletter Section */}
-<section className="newsletter">
-  <div className="newsletter-container">
-    {/* Left Side - Text */}
-    <div className="newsletter-text">
-      <h2>Subscribe to Our Newsletter</h2>
-      <p>Stay updated with our latest blog posts and design tips.</p>
-    </div>
+      <section className="newsletter">
+        <div className="newsletter-container">
+          {/* Left Side - Text */}
+          <div className="newsletter-text">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay updated with our latest blog posts and design tips.</p>
+          </div>
 
-    {/* Right Side - Form */}
-    <div className="newsletter-form">
-      <label htmlFor="email"><b>Email</b></label>
-      <input type="email" id="email" placeholder="Enter your email" />
-      <p className="privacy-text">We respect your privacy</p>
-      <button>Subscribe</button>
-    </div>
-  </div>
-</section>
+          {/* Right Side - Form */}
+          <div className="newsletter-form">
+            <label htmlFor="email"><b>Email</b></label>
+            <input type="email" id="email" placeholder="Enter your email" />
+            <p className="privacy-text">We respect your privacy</p>
+            <button>Subscribe</button>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { Button } from "../components/ui/button";
-import { Card, CardContent } from "../components/ui/card";
-import { Input } from "../components/ui/input";
+import { Button } from "../ui/button";
+import { Card, CardContent } from "../ui/card";
+import { Input } from "../ui/input";
 import "../../assets/css/LandingPage.css";
 import "../../assets/css/about.css";
 
