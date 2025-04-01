@@ -1,25 +1,20 @@
 import React, { useEffect, useRef } from "react";
 import "../../assets/css/Gallery.css"; // Custom CSS
+import i1 from "../../assets/images/i1.jpg";
+import i2 from "../../assets/images/i2.jpg";
+import i3 from "../../assets/images/i3.jpg";
+import i4 from "../../assets/images/i4.jpg";
+import i5 from "../../assets/images/i5.jpg";
 
-const slideshowImages = [
-  "../../assets/images/i1.jpg",
-  "../../assets/images/i2.jpg",
-  "../../assets/images/i3.jpg",
-  "../../assets/images/i4.jpg",
-  "../../assets/images/i5.jpg",
-  "../../assets/images/i1.jpg",
-  "../../assets/images/i2.jpg",
-  "../../assets/images/i3.jpg",
-];
+import g1 from "../../assets/images/g1.jpg";
+import g2 from "../../assets/images/g2.jpg";
+import g3 from "../../assets/images/g3.jpg";
+import g4 from "../../assets/images/g4.jpg";
 
-const gridImages = [
-  "../../assets/images/g1.jpg",
-  "../../assets/images/g2.jpg",
-  "../../assets/images/g3.jpg",
-  "../../assets/images/g4.jpg",
-  "../../assets/images/g1.jpg",
-  "../../assets/images/g2.jpg",
-];
+const slideshowImages = [i1, i2, i3, i4, i5, i1, i2, i3];
+
+
+const gridImages = [ g1, g2, g3, g4, g1, g2];
 
 const Gallery = () => {
   const sliderRef = useRef(null);

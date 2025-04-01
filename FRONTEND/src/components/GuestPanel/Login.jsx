@@ -11,22 +11,39 @@ import "../../assets/css/Slideshow.css";
 import logo from "../../assets/images/logo.png";
 import logo1 from "../../assets/images/logo1.png";
 import { Link } from "react-router-dom";
+import "../../assets/css/login.css";
 // import Navbar from "../components/Navbar";
 // import Footer from "../components/Footer";
 
-const Slideshow = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-  };
-
+const Login = () => {
   return (
+    <div className="login-container">
+      <h1 className="login-title">Login</h1>
+      <p className="login-subtitle">Enter your credentials to access your account</p>
+      
+      <form className="login-form">
+        <div className="input-group">
+          <label>Email</label>
+          <input type="email" placeholder="Enter your email" required />
+          <small>We'll never share your email with anyone else</small>
+        </div>
+
+        <div className="input-group">
+          <label>Password</label>
+          <input type="password" placeholder="Enter your password" required />
+          <small>Password must be at least 8 characters</small>
+        </div>
+
+        <div className="button-group">
+          <button type="button" className="forgot-password">Forgot Password?</button>
+          <button type="submit" className="login-button">Login</button>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+
     <div className="font-sans text-black bg-white">
 
       {/* Newsletter Section */}
@@ -51,6 +68,4 @@ const Slideshow = () => {
 
     </div>
 
-  );
-};
-export default Slideshow;
+export default Login;
