@@ -1,12 +1,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "../src/components/GuestPanel/Home";
 import About from "../src/components/GuestPanel/About";
-import Blog from "../components/GuestPanel/Blog";
-import Gallery from "../components/GuestPanel/Gallery";
-import Career from "../components/GuestPanel/Career";
-import Contact from "../components/GuestPanel/Contact";
-import Login from "../components/GuestPanel/Login";
-import Register from "../components/GuestPanel/Register";
+import Blog from "../src/components/GuestPanel/Blog";
+import Gallery from "../src/components/GuestPanel/Gallery";
+import Career from "../src/components/GuestPanel/Career";
+import Contact from "../src/components/GuestPanel/Contact";
+import Login from "../src/components/GuestPanel/Login";
+import Register from "../src/components/GuestPanel/Register";
 import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
 
