@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { Button } from "../components/ui/button";
-import { Card, CardContent } from "../components/ui/card";
-import { Input } from "../components/ui/input";
+import { Button } from "../ui/button";
+import { Card, CardContent } from "../ui/card";
+import { Input } from "../ui/input";
 import { Mail, Phone, MapPin, Menu, X, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../../src/assets/css/LandingPage.css";
+import "../../assets/css/LandingPage.css";
 import sofa from "../../assets/images/sofa.png";  //Images of Featured products
 import table from "../../assets/images/table.png";
 import rug from "../../assets/images/rug.png";
@@ -24,8 +24,8 @@ import user3 from "../../assets/images/team3.png";
 import logo from "../../assets/images/logo.png";
 import logo1 from "../../assets/images/logo1.png";
 import { Link } from "react-router-dom";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
+import Navbar from "../Navbar";
+import Footer from "../Footer";
 
 const Blog = () => {
   const products = [
