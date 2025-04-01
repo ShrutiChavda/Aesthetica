@@ -1,4 +1,3 @@
-// Budget.jsx
 import React from 'react';
 import "../../assets/css/admin/Budget.css";
 import Sidebar from "./Sidebar.jsx";

@@ -1,8 +1,8 @@
 .sidebar {
   width: 250px;
   height: 150vh;
-  background: #ffffff; /* Default background white */
-  color: #000000; /* Default text color black */
+  background: #ffffff;
+  color: #000000;
   position: absolute;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@
 .profile-container {
   display: flex;
   align-items: center;
-  background-color: #ffffff; /* Light background */
+  background-color: #ffffff;
 }
 
 .profile-image {
@@ -31,13 +31,13 @@
 .profile-name {
   margin: 0;
   font-size: 1.2em;
-  color: #333; /* Dark text */
+  color: #333;
 }
 
 .profile-title {
   margin: 5px 0 0;
   font-size: 0.9em;
-  color: #666; /* Medium text */
+  color: #666;
 }
 
 .logo {
@@ -51,7 +51,6 @@
 
 .menuBtn {
   display: none;
-
 }
 
 .main-content {
@@ -59,7 +58,6 @@
   padding: 20px;
   width: 100%;
 }
-
 
 .profile {
   text-align: center;
@@ -83,13 +81,12 @@
   padding: 10px 0;
 }
 
-/* Sidebar Links */
 .sidebar ul li a {
   display: flex;
   align-items: center;
-  gap: 10px; /* Space between icon and text */
-  color: #000000 !important; /* Default text color black */
-  background-color: #ffffff !important; /* Default background white */
+  gap: 10px;
+  color: #000000 !important;
+  background-color: #ffffff !important;
   padding: 10px;
   border-radius: 5px;
   text-decoration: none;
@@ -98,20 +95,25 @@
   transition: background-color 0.3s, color 0.3s;
 }
 
-/* Icon Styling */
 .sidebar ul li a i {
   font-size: 1.2em;
-  color: inherit !important; /* Ensures icon color changes with text */
+  color: inherit !important;
 }
 
-/* Active and Hover State */
 .sidebar ul li a.active,
 .sidebar ul li a:hover {
-  background-color: #000000 !important; /* Black background */
-  color: #ffffff !important; /* White text */
+  background-color: #000000 !important;
+  color: #ffffff !important;
 }
 
-/* Mobile View */
+.sidebar ul li ul {
+  padding-left: 20px;
+}
+
+.sidebar ul li ul li a {
+  font-size: 0.9em;
+}
+
 @media (max-width: 768px) {
   .sidebar {
     transform: translateX(-100%);
@@ -138,5 +140,31 @@
     padding: 20px;
     width: 100%;
   }
-  
+}
+
+.career-menu ul {
+  display: none;
+  padding-left: 20px;
+}
+
+.career-menu.open ul {
+  display: block;
+}
+
+.submenu {
+  margin-top: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.submenu li a.active {
+  font-weight: bold;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.career-menu.open {
+  background-color: #ffffff;
+  border-radius: 5px;
 }

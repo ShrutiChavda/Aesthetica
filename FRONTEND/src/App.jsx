@@ -7,7 +7,6 @@ import Career from "../src/components/GuestPanel/Career";
 import Contact from "../src/components/GuestPanel/Contact";
 import Login from "../src/components/GuestPanel/Login";
 import Register from "../src/components/GuestPanel/Register";
-// import Navbar from "../src/components/Navbar";
 import Footer from "../src/components/Footer";
 
 // Admin Routes
@@ -18,7 +17,7 @@ import AdminRoom from "../src/components/Admin/Room";
 import AdminCareer from "../src/components/Admin/Career";
 import AdminJobApplication from "../src/components/Admin/JobApplication";
 import AdminSettings from "../src/components/Admin/Settings";
-import AdminLogout from "../src/components/Admin/Logout";
+import AdminLogout from "../src/components/GuestPanel/Home";
 
 
 function App() {

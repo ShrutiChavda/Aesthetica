@@ -1,4 +1,3 @@
-// Room.jsx
 import React from 'react';
 import "../../assets/css/admin/Room.css";
 import Sidebar from "./Sidebar.jsx";

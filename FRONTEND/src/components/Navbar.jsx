@@ -12,7 +12,6 @@ const Navbar = () => {
         <img src={logo} alt="Aesthetica Logo" className="h-10" />
       </div>
 
-      {/* Wrap navigation links inside a div with a class for right alignment */}
       <div className="flex items-center space-x-6 nav-links">
         <ul className="flex space-x-6 font-medium">
           <li>
@@ -47,7 +46,6 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Buttons moved inside the same div for alignment */}
         <div className="space-x-3">
           <Button variant="outline" className="px-4 py-2 text-gray-800 border border-gray-500 rounded-lg sn">
             <Link to="/login">Sign In</Link>

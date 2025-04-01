@@ -1,8 +1,8 @@
-// Dashboard.jsx
 import React from 'react';
 import "../../assets/css/admin/index.css";
 import Sidebar from "./Sidebar.jsx";
 import Topbar from "./topbar.jsx";
+import chart from "../../assets/images/chart.png";
 function Dashboard() {
   
   return (    
@@ -89,7 +89,7 @@ function Dashboard() {
             <h2>Budget Overview</h2>
             <a href="#">View Report</a>
           </div>
-          <img src="your-chart-image.png" alt="Budget Chart" />
+          <img src={chart} alt="Budget Chart" />
         </div>
       </div>
 

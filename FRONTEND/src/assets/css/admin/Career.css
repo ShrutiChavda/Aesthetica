@@ -1,0 +1,156 @@
+/* Career.css */
+
+.career-container {
+    padding: 20px;
+  }
+  
+  .career-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .career-header h2 {
+    margin: 0;
+  }
+  
+  .new-position-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .career-description {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .career-filters {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .search-input,
+  .department-filter,
+  .location-filter {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .career-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .career-table th,
+  .career-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .career-table th {
+    background-color: #f8f9fa;
+  }
+  
+  .new-applications {
+    background-color: lightblue;
+    color: blue;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .active {
+    background-color: lightgreen;
+    color: green;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .close {
+    background-color: lightcoral;
+    color: darkred;
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    padding: 0 5px;
+  }
+  
+  .pagination {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .pagination-controls {
+    display: flex;
+    gap: 5px;
+  }
+  
+  .page-btn {
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .page-btn.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* Responsive Styles */
+  
+  @media (max-width: 768px) {
+    .main-content {
+      margin-left: 0;
+      padding: 10px;
+      width: 100%;
+    }
+  
+    .career-filters {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .search-input,
+    .department-filter,
+    .location-filter {
+      width: 100%;
+    }
+  
+    .career-table th:nth-child(5), /* Hide Applications */
+    .career-table td:nth-child(5),
+    .career-table th:nth-child(6), /* Hide Status */
+    .career-table td:nth-child(6) {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .career-table th:nth-child(4), /* Hide Posted Date */
+    .career-table td:nth-child(4) {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 320px) {
+    .career-table th:nth-child(3), /* Hide Location */
+    .career-table td:nth-child(3) {
+      display: none;
+    }
+  }

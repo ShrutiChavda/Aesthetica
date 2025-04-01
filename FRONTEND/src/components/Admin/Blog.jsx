@@ -1,4 +1,3 @@
-// Blog.jsx
 import React from 'react';
 import "../../assets/css/admin/Blog.css"; 
 import Sidebar from "./Sidebar.jsx";
@@ -21,11 +20,9 @@ function Blog() {
             <input type="text" placeholder="Search posts..." className="search-input" />
             <select className="category-filter">
               <option value="">All Categories</option>
-              {/* Add category options here */}
             </select>
             <select className="status-filter">
               <option value="">Status</option>
-              {/* Add status options here */}
             </select>
           </div>
 

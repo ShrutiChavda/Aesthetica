@@ -7,7 +7,6 @@ const Footer = () => {
     <footer className="p-6 bg-gray-100 footer">
       <div className="flex justify-between footer-container">
         
-        {/* Left Section - Logo & Social Media */}
         <div className="footer-brand">
           <img src={logo1} alt="Aesthetica Logo" className="h-12 mb-4 footer-logo" />
           <div className="flex space-x-4 social-icons">
@@ -18,7 +17,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Middle Section - Quick Links & Services */}
         <div className="flex space-x-10 footer-links">
           <div>
             <h4 className="font-semibold">Quick Links</h4>
@@ -45,7 +43,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Right Section - Contact Info */}
         <div className="footer-contact">
           <h4 className="font-semibold">Get in Touch</h4>
           <p><MapPin className="icon" /> 123 Main Street, Your City, State, Country.</p>
@@ -55,7 +52,6 @@ const Footer = () => {
         
       </div>
 
-      {/* Bottom Bar */}
       <div className="mt-4 text-center footer-bottom">
         <p>© 2025 Interior Design Blog. All Rights Reserved.</p>
         <div>

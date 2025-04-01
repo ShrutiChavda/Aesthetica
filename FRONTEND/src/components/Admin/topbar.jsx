@@ -1,4 +1,3 @@
-// Topbar.jsx
 import React from 'react';
 import profileImage from '../../assets/images/profile.png';
 import "../../assets/css/admin/topbar.css";
