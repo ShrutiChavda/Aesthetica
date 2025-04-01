@@ -66,18 +66,22 @@ function Sidebar() {
               <i className="bi bi-building"></i> Room Projects
             </NavLink>
           </li>
-          
+
           <li className={`career-menu ${isCareerOpen ? "open" : ""}`}>
-            <NavLink
-              to="/admin/career"
-              className={({ isActive }) => (isActive ? "active" : "")}
-              onClick={(e) => {
-                e.preventDefault();
-                setIsCareerOpen(!isCareerOpen);
-              }}
-            >
-              <i className="bi bi-briefcase"></i> Careers
-            </NavLink>
+          <NavLink
+  to="/admin/career"
+  className={({ isActive }) => {
+    if (isActive || isJobApplicationActive) {
+      setIsCareerOpen(true);
+      return "active";
+    }
+    return "";
+  }}
+  onClick={() => setIsCareerOpen(!isCareerOpen)}
+>
+  <i className="bi bi-briefcase"></i> Careers
+</NavLink>
+
             <ul className="submenu">
               <li>
                 <NavLink
@@ -89,7 +93,7 @@ function Sidebar() {
               </li>
             </ul>
           </li>
-          
+
           <li>
             <NavLink to="/admin/settings" end className={({ isActive }) => (isActive ? "active" : "")}>
               <i className="bi bi-gear"></i> Settings
@@ -104,7 +108,6 @@ function Sidebar() {
         </ul>
       </section>
     </div>
-
   );
 }
 

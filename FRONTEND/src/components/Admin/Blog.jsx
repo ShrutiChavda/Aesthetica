@@ -74,6 +74,7 @@ function Blog() {
               <button className="page-btn">Next</button>
             </div>
           </div>
+          <div className='blank'></div>
         </div>
       </div>
     </div>

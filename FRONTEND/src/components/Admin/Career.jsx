@@ -88,6 +88,8 @@ function Career() {
               <button className="page-btn">Next</button>
             </div>
           </div>
+          <div className='blank5'></div>
+
         </div>
       </div>
     </div>

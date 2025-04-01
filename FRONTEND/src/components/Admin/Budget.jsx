@@ -100,6 +100,7 @@ function Budget() {
               <div className="progress-percentage">60%</div>
             </div>
           </div>
+          <div className='blank1'></div>
         </div>
       </div>
     </div>

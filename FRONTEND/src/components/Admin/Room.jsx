@@ -106,6 +106,7 @@ function Room() {
               </div>
             </div>
           </div>
+          <div className='blank2'></div>
         </div>
       </div>
     </div>
