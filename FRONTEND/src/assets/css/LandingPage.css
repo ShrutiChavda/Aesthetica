@@ -72,7 +72,7 @@ body, html {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1300px;
   position: relative;
 }
 
@@ -719,9 +719,7 @@ body, html {
 }
 
 @media(max-width: 279px) {
-  .icon{
-    display: none;
-  }
+ 
   .footer-container{
     gap:1px;
   }

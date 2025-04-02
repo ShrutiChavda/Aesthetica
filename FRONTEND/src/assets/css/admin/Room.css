@@ -1,173 +1,165 @@
 /* Room.css */
 
 .room-management-container {
-    padding: 20px;
-  }
-  
-  .room-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .new-room-btn {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
+  padding: 20px;
+}
+
+.room-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.new-room-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.room-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.room-stat {
+  flex: 1;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  text-align: center;
+  min-width: 150px;
+  margin-bottom: 10px;
+}
+
+.stat-value {
+  font-weight: bold;
+  margin-top: 5px;
+}
+
+.room-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.room-list-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.filter-btn,
+.sort-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.room-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.room-table th,
+.room-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.room-table th {
+  background-color: #f8f9fa;
+}
+
+.completed {
+  background-color: lightgreen;
+  color: green;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.in-progress {
+  background-color: lightyellow;
+  color: orange;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.on-hold {
+  background-color: lightcoral;
+  color: darkred;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.edit-btn,
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 0 5px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 5px;
+}
+
+.page-btn {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.page-btn.active {
+  background-color: #007bff;
+  color: white;
+}
+
+@media (max-width: 768px) {
   .room-stats {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    flex-direction: column;
   }
-  
-  .room-stat {
-    flex: 1;
-    padding: 15px;
-    border: 1px solid #eee;
-    border-radius: 5px;
-    text-align: center;
+
+  .room-table th:nth-child(5),
+  .room-table td:nth-child(5),
+  .room-table th:nth-child(6),
+  .room-table td:nth-child(6) {
+    display: none;
   }
-  
-  .stat-value {
-    font-weight: bold;
-    margin-top: 5px;
+}
+
+@media (max-width: 480px) {
+  .room-table th:nth-child(3),
+  .room-table td:nth-child(3) {
+    display: none;
   }
-  
-  .room-list-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+}
+
+@media (max-width: 320px) {
+  .room-table th:nth-child(2),
+  .room-table td:nth-child(2) {
+    display: none;
   }
-  
-  .room-list-actions {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .filter-btn,
-  .sort-btn {
-    background-color: #f0f0f0;
-    border: 1px solid #ddd;
-    padding: 8px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .room-table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .room-table th,
-  .room-table td {
-    padding: 12px 15px;
-    text-align: left;
-    border-bottom: 1px solid #eee;
-  }
-  
-  .room-table th {
-    background-color: #f8f9fa;
-  }
-  
-  .completed {
-    background-color: lightgreen;
-    color: green;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  .in-progress {
-    background-color: lightyellow;
-    color: orange;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  .on-hold {
-    background-color: lightcoral;
-    color: darkred;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  .edit-btn,
-  .delete-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1.2em;
-    padding: 0 5px;
-  }
-  
-  .pagination {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-  }
-  
-  .pagination-controls {
-    display: flex;
-    gap: 5px;
-  }
-  
-  .page-btn {
-    padding: 5px 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .page-btn.active {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  /* Responsive Styles */
-  
-  @media (max-width: 768px) {
-    .main-content {
-      margin-left: 0;
-      padding: 10px;
-      width: 100%;
-    }
-  
-    .room-stats {
-      flex-direction: column;
-    }
-  
-    .room-stat {
-      margin-bottom: 10px;
-    }
-  
-    .room-table th:nth-child(5), /* Hide Designer */
-    .room-table td:nth-child(5),
-    .room-table th:nth-child(6), /* Hide Due Date */
-    .room-table td:nth-child(6) {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .room-table th:nth-child(3), /* Hide Project */
-    .room-table td:nth-child(3) {
-      display: none;
-    }
-  }
-  
-  @media (max-width: 320px) {
-    .room-table th:nth-child(2), /* Hide Room Name */
-    .room-table td:nth-child(2) {
-      display: none;
-    }
-  }
-  .blank2{
-    height: 240px;
-  }
+}
+
+.blank2 {
+  height: 240px;
+}
