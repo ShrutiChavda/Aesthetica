@@ -2,7 +2,7 @@ import React from 'react';
 import "../../assets/css/admin/Career.css";
 import Sidebar from "./Sidebar.jsx";
 import Topbar from "./topbar.jsx";
-
+import 'bootstrap-icons/font/bootstrap-icons.css';
 function Career() {
   return (
     <div className="main-content">
@@ -47,8 +47,12 @@ function Career() {
                 <td><span className="new-applications">12 New</span></td>
                 <td><span className="active">Active</span></td>
                 <td>
-                  <button className="edit-btn">📝</button>
-                  <button className="delete-btn">🗑️</button>
+                <button className="edit-btn">
+                    <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                </button>
+                <button className="delete-btn">
+                  <i className="bi bi-trash"></i> {/* Delete icon */}
+                </button>
                 </td>
               </tr>
               <tr>
@@ -59,8 +63,12 @@ function Career() {
                 <td><span className="new-applications">8 New</span></td>
                 <td><span className="active">Active</span></td>
                 <td>
-                  <button className="edit-btn">📝</button>
-                  <button className="delete-btn">🗑️</button>
+                <button className="edit-btn">
+                    <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                </button>
+                <button className="delete-btn">
+                  <i className="bi bi-trash"></i> {/* Delete icon */}
+                </button>
                 </td>
               </tr>
               <tr>
@@ -71,8 +79,12 @@ function Career() {
                 <td><span className="new-applications">15 New</span></td>
                 <td><span className="close">Close</span></td>
                 <td>
-                  <button className="edit-btn">📝</button>
-                  <button className="delete-btn">🗑️</button>
+                <button className="edit-btn">
+                    <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                </button>
+                <button className="delete-btn">
+                  <i className="bi bi-trash"></i> {/* Delete icon */}
+                </button>
                 </td>
               </tr>
             </tbody>

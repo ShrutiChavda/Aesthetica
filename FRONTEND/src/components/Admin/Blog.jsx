@@ -2,7 +2,7 @@ import React from 'react';
 import "../../assets/css/admin/Blog.css"; 
 import Sidebar from "./Sidebar.jsx";
 import Topbar from "./topbar.jsx";
-
+import 'bootstrap-icons/font/bootstrap-icons.css';
 function Blog() {
   return (
     <div className="main-content">
@@ -45,8 +45,12 @@ function Blog() {
                 <td><span className="published">Published</span></td>
                 <td>Jan 15, 2025</td>
                 <td>
-                  <button className="edit-btn">📝</button>
-                  <button className="delete-btn">🗑️</button>
+                  <button className="edit-btn">
+                    <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                  </button>
+                  <button className="delete-btn">
+                  <i className="bi bi-trash"></i> {/* Delete icon */}
+                  </button>
                 </td>
               </tr>
               <tr>
@@ -56,8 +60,12 @@ function Blog() {
                 <td><span className="draft">Draft</span></td>
                 <td>Jan 12, 2025</td>
                 <td>
-                  <button className="edit-btn">📝</button>
-                  <button className="delete-btn">🗑️</button>
+                  <button className="edit-btn">
+                  <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                  </button>
+                  <button className="delete-btn">
+                  <i className="bi bi-trash"></i> {/* Delete icon */}
+                  </button>
                 </td>
               </tr>
               {/* Add more rows here */}

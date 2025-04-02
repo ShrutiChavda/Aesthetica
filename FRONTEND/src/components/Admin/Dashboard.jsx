@@ -3,6 +3,7 @@ import "../../assets/css/admin/index.css";
 import Sidebar from "./Sidebar.jsx";
 import Topbar from "./topbar.jsx";
 import chart from "../../assets/images/chart.png";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 function Dashboard() {
   
   return (    
@@ -52,21 +53,42 @@ function Dashboard() {
               <td>Sarah Johnson</td>
               <td><span className="published">Published</span></td>
               <td>Jan 15, 2024</td>
-              <td><button>Edit</button> <button>Delete</button></td>
+              <td>
+                <button className="edit-btn">
+                    <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                </button>
+                <button className="delete-btn">
+                  <i className="bi bi-trash"></i> {/* Delete icon */}
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Sustainable Home Decor Guide</td>
               <td>Mike Peters</td>
               <td><span className="draft">Draft</span></td>
               <td>Jan 14, 2024</td>
-              <td><button>Edit</button> <button>Delete</button></td>
+              <td>
+              <button className="edit-btn">
+                    <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                </button>
+                <button className="delete-btn">
+                  <i className="bi bi-trash"></i> {/* Delete icon */}
+                </button>
+              </td>
             </tr>
             <tr>
               <td>Small Space Solutions</td>
               <td>Emma Wilson</td>
               <td><span className="published">Published</span></td>
               <td>Jan 13, 2024</td>
-              <td><button>Edit</button> <button>Delete</button></td>
+              <td>
+              <button className="edit-btn">
+                    <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                </button>
+                <button className="delete-btn">
+                  <i className="bi bi-trash"></i> {/* Delete icon */}
+                </button>
+              </td>
             </tr>
           </tbody>
         </table>

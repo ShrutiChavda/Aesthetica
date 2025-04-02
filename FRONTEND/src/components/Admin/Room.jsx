@@ -2,6 +2,7 @@ import React from 'react';
 import "../../assets/css/admin/Room.css";
 import Sidebar from "./Sidebar.jsx";
 import Topbar from "./topbar.jsx";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function Room() {
   return (
@@ -64,8 +65,12 @@ function Room() {
                   <td>John Doe</td>
                   <td>Dec 15, 2025</td>
                   <td>
-                    <button className="edit-btn">📝</button>
-                    <button className="delete-btn">🗑️</button>
+                    <button className="edit-btn">
+                      <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                    </button>
+                    <button className="delete-btn">
+                      <i className="bi bi-trash"></i> {/* Delete icon */}
+                    </button>
                   </td>
                 </tr>
                 <tr>
@@ -76,8 +81,12 @@ function Room() {
                   <td>Jane Smith</td>
                   <td>Jan 20, 2025</td>
                   <td>
-                    <button className="edit-btn">📝</button>
-                    <button className="delete-btn">🗑️</button>
+                    <button className="edit-btn">
+                      <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                    </button>
+                    <button className="delete-btn">
+                      <i className="bi bi-trash"></i> {/* Delete icon */}
+                    </button>
                   </td>
                 </tr>
                 <tr>
@@ -88,8 +97,12 @@ function Room() {
                   <td>Mike Johnson</td>
                   <td>Feb 28, 2025</td>
                   <td>
-                    <button className="edit-btn">📝</button>
-                    <button className="delete-btn">🗑️</button>
+                    <button className="edit-btn">
+                      <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                    </button>
+                    <button className="delete-btn">
+                      <i className="bi bi-trash"></i> {/* Delete icon */}
+                   </button>
                   </td>
                 </tr>
               </tbody>
