@@ -15,6 +15,7 @@ import { Link } from "react-router-dom";
 // import Navbar from "../components/Navbar";
 // import Footer from "../components/Footer";
 // import "../../src/assets/css/Contact.css";
+import Newsletter from "./newsletter";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -96,24 +97,7 @@ const Contact = () => {
         </div>
       </div>
 
-      {/* Newsletter Section */}
-      <section className="newsletter">
-        <div className="newsletter-container">
-          {/* Left Side - Text */}
-          <div className="newsletter-text">
-            <h2>Subscribe to Our Newsletter</h2>
-            <p>Stay updated with our latest blog posts and design tips.</p>
-          </div>
-
-          {/* Right Side - Form */}
-          <div className="newsletter-form">
-            <label htmlFor="email"><b>Email</b></label>
-            <input type="email" id="email" placeholder="Enter your email" />
-            <p className="privacy-text">We respect your privacy</p>
-            <button>Subscribe</button>
-          </div>
-        </div>
-      </section>
+      <Newsletter/>
 
 
     </div>

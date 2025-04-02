@@ -1,21 +1,3 @@
-/* Move the navigation links and buttons to the right */
-.nav-links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%; /* Push content to the right */
-}
-
-/* Navbar Styles */
-.navbar {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 0px;
-  background: white;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
 a {
   text-decoration: none !important; /* Remove underline */
   color: inherit !important; /* Use parent text color */
@@ -40,33 +22,6 @@ body, html {
   margin: 10px 10px 10px 10px;
 } */
 
-.navbar ul {
-  display: contents;
-  gap: 1px;
-  list-style: none;
-}
-
-.navbar ul li {
-  cursor: pointer;
-  font-weight: 500;
-  font-size: larger;
-  padding: 10px;
-}
-
-.navbar ul li:hover {
-  /*when hovered over the item it should zoom with soe heighlight*/
-  transform: scale(1.1);
-  transition: transform 0.3s ease-in-out;
-  color: rgb(47, 44, 44);
-  border-bottom: 2px solid rgb(0, 0, 0);
-
-}
-
-.navbar ul li .active {
-  color: rgb(47, 44, 44);
-  border-bottom: 2px solid rgb(0, 0, 0);
-  padding-bottom: 11px;
-}
 
 .sn{
   color: rgb(0, 0, 0);
@@ -87,76 +42,7 @@ body, html {
   margin: 10px 10px 10px 10px;
 }
 
-@media (max-width: 788px) {
-  .navbar ul {
-    display: contents;
-  }
-  .sn{
-    padding: -1px 10px;
-    font-size: small;
-  }
-  .rg{
-    padding: -1px 10px;
-    font-size: small;
-  }
-  .navbar ul li{
-    cursor: pointer;
-    font-weight: 100;
-    font-size: inherit;
-    padding: 5px;
-    }
 
-    .navbar ul li .active {
-      color: rgb(47, 44, 44);
-      border-bottom: 2px solid rgb(0, 0, 0);
-      padding-bottom: 6px;
-    }
-}
-
-
-@media (max-width: 595px) {
-  .navbar ul {
-    display: contents;
-  }
-  .sn{
-    padding: -1px 10px;
-    font-size: small;
-    padding: 1px 5px;
-  }
-  .rg{
-    padding: -1px 10px;
-    font-size: small;
-    padding: 1px 5px;
-  }
-  .navbar ul li{
-    cursor: pointer;
-    font-weight: 100;
-    font-size: inherit;
-    padding: 5px;
-    }
-}
-
-@media (max-width: 517px) {
-  .sn{
-    padding: -1px 10px;
-    font-size: small;
-    padding: 1px 3px;
-  }
-  .rg{
-    padding: -1px 10px;
-    font-size: small;
-    padding: 1px 3px;
-  }
-  .navbar ul li{
-    padding: 2px;
-    font-size: smaller;
-  }
-  .navbar ul li .active {
-    color: rgb(47, 44, 44);
-    border-bottom: 2px solid rgb(0, 0, 0);
-    padding-bottom: 3px;
-  }
-}
 
 @media (max-width: 429px) {
   .sn{
@@ -169,64 +55,106 @@ body, html {
   }
 }
 
-@media (max-width: 411px) {
-  .navbar{
-    flex-direction: column;
-  }
-  .sn{
-    padding: -1px 5px;
-    font-size: small;
-  }
-  .rg{
-    font-size: small;
-    padding: 1px 5px;
-  }
-  .navbar ul li .active {
-    color: rgb(47, 44, 44);
-    border-bottom: 2px solid rgb(0, 0, 0);
-    padding-bottom: 3px;
-  }
+/* Navbar Section */
+
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-@media (max-width: 330px) {
-  .navbar ul li{
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+}
+
+.menu-toggle-container {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
   cursor: pointer;
-  font-weight: 100;
-  font-size: small;
-  padding: 5px;
-  }
-  #b1{
-    font-size: small;
-  }
-  .navbar ul li .active {
-    color: rgb(47, 44, 44);
-    border-bottom: 2px solid rgb(0, 0, 0);
-    padding-bottom: 6px;
-  }
-  .nav-links{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    width: 100%;
-    flex-direction: column;
-  }
 }
 
-@media (max-width: 388px) {
-  .navbar{
-    flex-direction: column;
+.nav-links {
+  display: flex;
+  align-items: center;
+  transition: max-height 0.3s ease-in-out;
+}
 
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links ul li {
+  font-size: larger;
+  padding: 10px;
+}
+
+.nav-links ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
+@media (max-width: 789px) {
+  .menu-toggle {
+    display: block;
   }
-  .navbar ul {
-    display: contents;
-    
-  }
-  .navbar{
-    display: flex;
-    justify-content: space-between;
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
     align-items: center;
-    padding: 10px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
     background: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .nav-links.open {
+    display: flex;
+    max-height: 500px;
+    padding: 20px 0;
+  }
+
+  .nav-links ul {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+  }
+
+  .nav-buttons {
+    flex-direction: row;
+    align-items: center;
+    width: auto;
+    margin-left: auto;
   }
 }
 
@@ -441,8 +369,8 @@ body, html {
   background: #ffffff;
   box-shadow: 0px 4px 3px 2px rgb(53 40 40 / 12% );
 }
-/* Your existing CSS */
 
+/* Newsltter section*/
 .newsletter {
   background-color: #f0f0f0;
   padding: 50px 20px;
@@ -454,13 +382,19 @@ body, html {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 20px;
+}
+
+.newsletter-text,
+.newsletter-form {
+  flex: 1 1 300px;
+  min-width: 250px;
+  box-sizing: border-box;
 }
 
 .newsletter-text {
-  flex: 1;
-  padding-right: 20px;
-  min-width: 250px; /* Prevent text from getting too squished */
+  text-align: center;
 }
 
 .newsletter-text h2 {
@@ -474,10 +408,9 @@ body, html {
 }
 
 .newsletter-form {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  min-width: 250px; /* Prevent form from getting too squished */
+  align-items: stretch;
 }
 
 .newsletter-form label {
@@ -499,12 +432,15 @@ body, html {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  align-self: center;
+  width: auto;
 }
 
 .privacy-text {
   font-size: 0.8rem;
   color: #555;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -519,63 +455,32 @@ body, html {
     padding-right: 0;
     margin-bottom: 20px;
   }
-}
 
-.privacy-text {
-  font-size: 12px;
-  color: gray;
-  text-align: left;
-}
-
-.newsletter-form button {
-  padding: 16px;
-  background: black;
-  color: white;
-  width: 60%;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  margin-top: 8px;
+  .newsletter-form button {
+    width: 60%;
+    align-self: center;
+  }
 }
 
 @media (max-width: 600px) {
-  .newsletter-container {
-   display: flow;
-   grid-template-columns: 1fr 1fr;
-   max-width: 880px;
-   width: 73%;
-   gap: 40px;
-   align-items: center;
-   align-content: space-around;
-   }
-   .newsletter-text h2 {
-     font-size: 25px;
-   }
-   .newsletter-form button {
-    padding: 8px;
-    width: 60%;
-   }
- }
-
- @media (max-width: 360px){
-  .newsletter-container{
-    padding-right: 20px;
+  .newsletter-text h2 {
+    font-size: 1.5rem;
   }
- }
- @media (max-width: 200px){
-  .newsletter{
-  padding: 42px 61px 20px 0px;
-  max-width: 90%;
-  }
- }
- 
+}
 
- @media (max-width: 609px){
- .newsletter-form{
-  align-items: center;
- }
- }
+@media (max-width: 400px) {
+  .newsletter-form input,
+  .newsletter-form button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .newsletter {
+    padding: 30px 10px;
+  }
+}
  
 /* Footer Styling */
 .footer {
@@ -1196,48 +1101,7 @@ body, html {
       gap: 20px;
     }
   }
-/* Newsletter Section */
-/* .newsletter {
-  background: #f8f9fa;
-  padding: 40px 20px;
-  text-align: center;
-} */
 
-.newsletter-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-}
-
-.newsletter-text {
-  flex: 1;
-  min-width: 250px;
-  text-align: center;
-}
-
-.newsletter-form {
-  flex: 1;
-  min-width: 250px;
-  text-align: center;
-}
-
-.newsletter-form input {
-  max-width: 500px;
-  margin-top: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 12px;
-}
-
-.newsletter-form button {
-  background-color: black;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 5px;
-  margin-top: 10px;
-}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -1264,30 +1128,6 @@ body, html {
   width: 90%;
   text-align: center;
 }
-
-@media (max-width: 260px){
-  .newsletter{
-    padding: 42px 8px 20px 0px;
-    max-width: 90%;
-  }
-  .newsletter-form input{
-    max-width: 150px;
-  }
-  .newsletter-form{
-    max-width: 150px;
-  }
-  .newsletter-text{
-    max-width: 150px;
-  }
-  
- }
-
- @media (max-width: 240px){
-  .newsletter{
-    display: none;
-  }
-  
- }
 
 .blog-card img {
   width: 100%;

@@ -5,7 +5,7 @@ import { Input } from "../ui/input";
 import "../../assets/css/LandingPage.css";
 import "../../assets/css/about.css";
 import Navbar from "../Navbar";
-
+import Newsletter from "./newsletter";
 
 const About = () => {
   return (
@@ -91,27 +91,7 @@ const About = () => {
           </Card>
         </div>
       </section>
-
-      {/* Newsletter Section */}
-      <section className="newsletter">
-        <div className="newsletter-container">
-          {/* Left Side - Text */}
-          <div className="newsletter-text">
-            <h2>Subscribe to Our Newsletter</h2>
-            <p>Stay updated with our latest blog posts and design tips.</p>
-          </div>
-
-          {/* Right Side - Form */}
-          <div className="newsletter-form">
-            <label htmlFor="email">
-              <b>Email</b>
-            </label>
-            <input type="email" id="email" placeholder="Enter your email" />
-            <p className="privacy-text">We respect your privacy</p>
-            <button>Subscribe</button>
-          </div>
-        </div>
-      </section>
+      <Newsletter/>
     </div>
   );
 };

@@ -5,6 +5,8 @@ import { Input } from "../ui/input";
 import Navbar from "../Navbar";
 import { Mail, Phone, MapPin, Menu, X, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
 import "../../assets/css/admin/register.css";
+import Newsletter from "./newsletter";
+
 
 function Register() {
   return (
@@ -46,6 +48,9 @@ function Register() {
           <p>Already have an account? <a href="/login">Sign in</a></p>
         </div>
       </div>
+
+      <Newsletter/>
+
     </div>
   );
 }

@@ -1,14 +1,11 @@
-/* navbar.css */
-
-/* Move the navigation links and buttons to the right */
 .nav-links {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  width: 100%; /* Push content to the right */
+  width: 100%; 
+  z-index: 1000; 
 }
 
-/* Navbar Styles */
 .navbar {
   display: flex;
   justify-content: flex-start;
@@ -19,8 +16,8 @@
 }
 
 a {
-  text-decoration: none !important; /* Remove underline */
-  color: inherit !important; /* Use parent text color */
+  text-decoration: none !important;
+  color: inherit !important; 
 }
 
 body, html {
@@ -30,7 +27,7 @@ body, html {
 }
 
 .auth-buttons {
-  margin-left: auto; /* Pushes the buttons to the right */
+  margin-left: auto;
   display: flex;
 }
 
@@ -48,7 +45,6 @@ body, html {
 }
 
 .navbar ul li:hover {
-  /*when hovered over the item it should zoom with soe heighlight*/
   transform: scale(1.1);
   transition: transform 0.3s ease-in-out;
   color: rgb(47, 44, 44);
@@ -59,6 +55,14 @@ body, html {
   color: rgb(47, 44, 44);
   border-bottom: 2px solid rgb(0, 0, 0);
   padding-bottom: 11px;
+}
+
+@media (max-width: 620px) {
+  .navbar ul li .active {
+
+  padding-bottom: 5px;
+  }
+
 }
 
 .sn {
