@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import { Menu, X } from "lucide-react";
 import logo from "../assets/images/logo.png";
 import "../../src/assets/css/LandingPage.css";
-
+import "../../src/assets/css/navbar.css";
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 

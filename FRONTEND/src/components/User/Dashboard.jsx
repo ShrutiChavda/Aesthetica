@@ -1,5 +1,5 @@
 import React from 'react';
-import Navbar from './Navbar';
+import Navbar from './UserNav';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function App() {
