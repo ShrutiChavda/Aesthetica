@@ -5,6 +5,7 @@ import Topbar from "./topbar.jsx";
 import img1 from "../../assets/images/img1.png";
 import img2 from "../../assets/images/img2.png";
 import img3 from "../../assets/images/img3.png";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 function JobApplication() {
   return (
@@ -73,8 +74,12 @@ function JobApplication() {
                   <td>Jan 15, 2025</td>
                   <td><span className="shortlisted">Shortlisted</span></td>
                   <td>
-                    <button className="view-btn">👁️</button>
-                    <button className="delete-btn">🗑️</button>
+                  <button className="edit-btn">
+                    <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                </button>
+                <button className="delete-btn">
+                  <i className="bi bi-trash"></i> {/* Delete icon */}
+                </button>
                   </td>
                 </tr>
                 <tr>
@@ -91,8 +96,12 @@ function JobApplication() {
                   <td>Jan 14, 2025</td>
                   <td><span className="under-review">Under Review</span></td>
                   <td>
-                    <button className="view-btn">👁️</button>
-                    <button className="delete-btn">🗑️</button>
+                  <button className="edit-btn">
+                    <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                </button>
+                <button className="delete-btn">
+                  <i className="bi bi-trash"></i> {/* Delete icon */}
+                </button>
                   </td>
                 </tr>
                 <tr>
@@ -109,8 +118,12 @@ function JobApplication() {
                   <td>Jan 13, 2025</td>
                   <td><span className="rejected">Rejected</span></td>
                   <td>
-                    <button className="view-btn">👁️</button>
-                    <button className="delete-btn">🗑️</button>
+                    <button className="edit-btn">
+                    <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                    </button>
+                    <button className="delete-btn">
+                    <i className="bi bi-trash"></i> {/* Delete icon */}
+                    </button>
                   </td>
                 </tr>
               </tbody>
