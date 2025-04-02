@@ -22,25 +22,25 @@ function UserNav() {
           ☰
         </button>
 
-        <div className={`navbar-menu1 ${isMobileMenuOpen ? 'active1' : ''}`}>
+        <div className={`navbar-menu1 ${isMobileMenuOpen ? '' : ''}`}>
           <ul className="navbar-nav1">
             <li className="nav-item1">
-              <NavLink to="/user/index" className="nav-link1" activeclassname="active">Home</NavLink>
+              <NavLink to="/user/index" className="nav-link1">Home</NavLink>
             </li>
             <li className="nav-item1">
-              <NavLink to="/user/blog" className="nav-link1" activeclassname="active">Blog</NavLink>
+              <NavLink to="/user/blog" className="nav-link1">Blog</NavLink>
             </li>
             <li className="nav-item1">
-              <NavLink to="/user/style" className="nav-link1" activeclassname="active">Styles</NavLink>
+              <NavLink to="/user/style" className="nav-link1">Styles</NavLink>
             </li>
             <li className="nav-item1">
-              <NavLink to="/user/budget" className="nav-link1" activeclassname="active">Budget</NavLink>
+              <NavLink to="/user/budget" className="nav-link1">Budget</NavLink>
             </li>
             <li className="nav-item1">
-              <NavLink to="/user/room" className="nav-link1" activeclassname="active">Measure</NavLink>
+              <NavLink to="/user/room" className="nav-link1">Measure</NavLink>
             </li>
             <li className="nav-item1">
-              <NavLink to="/user/job" className="nav-link1" activeclassname="active">Careers</NavLink>
+              <NavLink to="/user/job" className="nav-link1">Careers</NavLink>
             </li>
           </ul>
 
