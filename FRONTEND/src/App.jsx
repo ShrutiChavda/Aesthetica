@@ -19,6 +19,14 @@ import AdminJobApplication from "../src/components/Admin/JobApplication";
 import AdminSettings from "../src/components/Admin/Settings";
 import AdminLogout from "../src/components/GuestPanel/Home";
 
+// User panel
+import UserDashboard from "../src/components/User/Dashboard";
+import UserBlog from "../src/components/User/Blog";
+import UserStyle from "../src/components/User/Style";
+import UserBudget from "../src/components/User/Budget";
+import UserRoom from "../src/components/User/Room";
+import UserJob from "../src/components/User/Job";
+import UserProfile from "../src/components/User/Profile";  /* as settings in admin*/
 
 function App() {
   return (
@@ -43,6 +51,14 @@ function App() {
         <Route path="/admin/jobapplication" element={<AdminJobApplication />} />
         <Route path="/admin/settings" element={<AdminSettings />} />
         <Route path="/admin/logout" element={<AdminLogout />} />
+
+        <Route path="/user/index" element={<UserDashboard />} />
+        <Route path="/user/blog" element={<UserBlog />} />
+        <Route path="/user/style" element={<UserStyle />} />
+        <Route path="/user/budget" element={<UserBudget />} />
+        <Route path="/user/room" element={<UserRoom />} />
+        <Route path="/user/job" element={<UserJob />} />
+        <Route path="/user/profile" element={<UserProfile />} />
 
       </Routes>
       <Footer />

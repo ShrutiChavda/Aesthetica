@@ -441,59 +441,85 @@ body, html {
   background: #ffffff;
   box-shadow: 0px 4px 3px 2px rgb(53 40 40 / 12% );
 }
+/* Your existing CSS */
 
-/* Newsletter Section */
 .newsletter {
-  display: flex;
-  background-color: rgb(249, 251, 248);
-  justify-content: center;
-  align-items: center;
-  padding: 50px 0px 30px 0px;
-  max-width: 100%;
+  background-color: #f0f0f0;
+  padding: 50px 20px;
 }
 
 .newsletter-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 900px;
-  width: 100%;
-  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  margin: 10px 10px 10px 40px;
+  justify-content: space-between;
+}
+
+.newsletter-text {
+  flex: 1;
+  padding-right: 20px;
+  min-width: 250px; /* Prevent text from getting too squished */
 }
 
 .newsletter-text h2 {
-  font-size: 40px;
-  font-weight: bold;
-  color: black;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
-
-
 .newsletter-text p {
-  color: rgb(0, 0, 0);
-  margin-top: 8px;
+  font-size: 1rem;
+  color: #555;
 }
 
 .newsletter-form {
+  flex: 1;
   display: flex;
   flex-direction: column;
+  min-width: 250px; /* Prevent form from getting too squished */
 }
 
 .newsletter-form label {
-  font-weight: 500;
-  color: black;
+  font-weight: bold;
   margin-bottom: 5px;
-  text-align: left;
 }
-/* 
+
 .newsletter-form input {
-  padding: 12px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 80%;
-  margin-bottom: 5px;
-} */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.newsletter-form button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.privacy-text {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .newsletter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newsletter-text,
+  .newsletter-form {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
+  }
+}
 
 .privacy-text {
   font-size: 12px;
