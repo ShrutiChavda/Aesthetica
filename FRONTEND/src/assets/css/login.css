@@ -5,6 +5,7 @@
   justify-content: center;
   height: 100vh;
   background-color: #fff;
+  padding: 20px;
 }
 
 .login-title {
@@ -51,7 +52,6 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
-
 .input-group small {
   font-size: 0.8rem;
   color: #777;
@@ -81,10 +81,93 @@
   font-size: 1rem;
   cursor: pointer;
 }
+
+@media screen and (max-width: 768px) {
+  .login-container {
+    height: auto;
+    padding: 30px 20px;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .input-group input {
     padding: 10px;
     font-size: 0.9rem;
-    width: 250px;
+  }
+}
+
+.newsletter {
+  background-color: #f0f0f0;
+  padding: 50px 20px;
+}
+
+.newsletter-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.newsletter-text {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.newsletter-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.newsletter-text p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.newsletter-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.newsletter-form label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.newsletter-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.newsletter-form button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.privacy-text {
+  font-size: 0.8rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .newsletter-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .newsletter-text,
+  .newsletter-form {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 20px;
   }
 }

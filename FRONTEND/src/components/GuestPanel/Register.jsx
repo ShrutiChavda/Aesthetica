@@ -4,55 +4,50 @@ import { Card, CardContent } from "../ui/card";
 import { Input } from "../ui/input";
 import Navbar from "../Navbar";
 import { Mail, Phone, MapPin, Menu, X, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import "../../assets/css/LandingPage.css";
-import "../../assets/css/Slideshow.css";
-import logo from "../../assets/images/logo.png";
-import logo1 from "../../assets/images/logo1.png";
-import { Link } from "react-router-dom";
-// import Navbar from "../components/Navbar";
-// import Footer from "../components/Footer";
+import "../../assets/css/admin/register.css";
 
-const Slideshow = () => {
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 1000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    arrows: false,
-  };
-
+function Register() {
   return (
     <div className="font-sans text-black bg-white">
-            <Navbar />  {/* Add Navbar Component Here */}
+      <Navbar />
+      <div className="register-container">
+        <h1 className="register-title">Register</h1>
+        <p className="register-subtitle">Create a new account to explore the world of interior design</p>
 
-      {/* Newsletter Section */}
-      <section className="newsletter">
-        <div className="newsletter-container">
-          {/* Left Side - Text */}
-          <div className="newsletter-text">
-            <h2>Subscribe to Our Newsletter</h2>
-            <p>Stay updated with our latest blog posts and design tips.</p>
+        <form className="register-form">
+          <div className="form-group">
+            <label htmlFor="fullName">Full Name</label>
+            <input type="text" id="fullName" placeholder="Enter your full name" />
+            <small>Please provide your full name</small>
           </div>
 
-          {/* Right Side - Form */}
-          <div className="newsletter-form">
-            <label htmlFor="email"><b>Email</b></label>
+          <div className="form-group">
+            <label htmlFor="email">Email</label>
             <input type="email" id="email" placeholder="Enter your email" />
-            <p className="privacy-text">We respect your privacy</p>
-            <button>Subscribe</button>
+            <small>We'll send a verification link to this email</small>
           </div>
+
+          <div className="form-group">
+            <label htmlFor="password">Password</label>
+            <input type="password" id="password" placeholder="Enter a password" />
+            <small>Password must be at least 8 characters</small>
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" placeholder="Re-enter your password" />
+            <small>Passwords must match</small>
+          </div>
+
+          <button type="submit" className="register-button">Register</button>
+        </form>
+
+        <div className="login-link">
+          <p>Already have an account? <a href="/login">Sign in</a></p>
         </div>
-      </section>
-
-
+      </div>
     </div>
-
   );
-};
-export default Slideshow;
+}
+
+export default Register;
