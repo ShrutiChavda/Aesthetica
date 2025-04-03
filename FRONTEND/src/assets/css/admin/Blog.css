@@ -73,7 +73,7 @@
 }
 
 .draft {
-  background-color: lightyellow;
+  background-color: rgb(255, 255, 108);
   color: orange;
   padding: 5px 10px;
   border-radius: 5px;
