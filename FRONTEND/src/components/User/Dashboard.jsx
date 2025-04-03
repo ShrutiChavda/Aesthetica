@@ -1,14 +1,11 @@
-import React from 'react';
-import Navbar from './UserNav';
-import 'bootstrap-icons/font/bootstrap-icons.css';
-
-function App() {
+import React from 'react'
+import Blog from "./Blog";
+function Dashboard() {
   return (
-    <div className="App">
-      <Navbar />
-      Welcome
+    <div className="font-sans text-black bg-white">
+    <Blog/>
     </div>
-  );
+  )
 }
 
-export default App;
+export default Dashboard

@@ -42,6 +42,7 @@ function UserNav() {
             <li className="nav-item1">
               <NavLink to="/user/job" className="nav-link1">Careers</NavLink>
             </li>
+        
           </ul>
 
           <div className="navbar-search1">

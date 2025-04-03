@@ -26,7 +26,7 @@ import UserStyle from "../src/components/User/Style";
 import UserBudget from "../src/components/User/Budget";
 import UserRoom from "../src/components/User/Room";
 import UserJob from "../src/components/User/Job";
-import UserProfile from "../src/components/User/Profile";  /* as settings in admin*/
+import UserSettings from "../src/components/User/Settings"; 
 
 function App() {
   return (
@@ -58,7 +58,7 @@ function App() {
         <Route path="/user/budget" element={<UserBudget />} />
         <Route path="/user/room" element={<UserRoom />} />
         <Route path="/user/job" element={<UserJob />} />
-        <Route path="/user/profile" element={<UserProfile />} />
+        <Route path="/user/settings" element={<UserSettings />} />
 
       </Routes>
       <Footer />
