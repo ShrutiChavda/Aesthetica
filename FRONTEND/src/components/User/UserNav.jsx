@@ -22,7 +22,7 @@ function UserNav() {
           ☰
         </button>
 
-        <div className={`navbar-menu1 ${isMobileMenuOpen ? '' : ''}`}>
+        <div className={`navbar-menu1 ${isMobileMenuOpen ? 'active1' : ''}`}>
           <ul className="navbar-nav1">
             <li className="nav-item1">
               <NavLink to="/user/index" className="nav-link1">Home</NavLink>

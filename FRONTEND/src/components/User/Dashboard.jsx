@@ -1,14 +1,9 @@
-import React from 'react';
-import Navbar from './UserNav';
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import React from 'react'
 
-function App() {
+function Dashboard() {
   return (
-    <div className="App">
-      <Navbar />
-      Welcome
-    </div>
-  );
+    <div>Dashboard</div>
+  )
 }
 
-export default App;
+export default Dashboard
