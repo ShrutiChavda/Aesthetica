@@ -1,0 +1,62 @@
+.job-listings-container {
+    font-family: sans-serif;
+    padding: 20px;
+  }
+  
+  .job-listings-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .job-listings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .job-listing {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+  
+  .job-location,
+  .job-type,
+  .job-experience {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .job-location i,
+  .job-type i,
+  .job-experience i {
+    margin-right: 8px;
+    font-size: 1.1em;
+  }
+  
+  .view-details {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 15px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9em;
+  }
+  
+  .view-details i {
+    margin-left: 5px;
+  }
+  
+  .view-details:hover {
+    text-decoration: underline;
+  }
