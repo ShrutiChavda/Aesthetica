@@ -1,0 +1,68 @@
+.style-page-container {
+    font-family: sans-serif;
+    padding: 20px;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+  }
+  
+  .find-style {
+    max-width: 1200px; /* Limit width for larger screens */
+    width: 100%; /* Take full width on smaller screens */
+  }
+  
+  .find-style h2 {
+    text-align: left;
+    margin-bottom: 30px;
+    font-size: 2em;
+  }
+  
+  .style-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .style-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center; /* Center content within each item */
+  }
+  
+  .style-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .style-item h3 {
+    text-align: left;
+    padding-left: 20px;
+    margin: 20px 0 10px;
+    font-size: 1.2em;
+  }
+  
+  .style-item p {
+    text-align: left;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    padding: 0 15px; /* Add padding for better spacing */
+  }
+  
+  .explore-style {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #f0f0f0;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-right: 382px;
+    width: 100px;
+  }
+  @media (max-width: 406px) {
+    .explore-style {
+        width: 100px;
+        margin-right: 200px;
+    }
+  }
