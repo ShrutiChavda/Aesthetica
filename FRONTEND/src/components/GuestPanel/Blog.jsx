@@ -26,6 +26,8 @@ import logo1 from "../../assets/images/logo1.png";
 import { Link } from "react-router-dom";
 import Navbar from "../Navbar";
 import Footer from "../Footer";
+import Newsletter from "./newsletter";
+
 
 const Blog = () => {
 
@@ -106,24 +108,7 @@ const Blog = () => {
         </div>
       </section>
 
-      {/* Newsletter Section */}
-      <section className="newsletter">
-        <div className="newsletter-container">
-          {/* Left Side - Text */}
-          <div className="newsletter-text">
-            <h2>Subscribe to Our Newsletter</h2>
-            <p>Stay updated with our latest blog posts and design tips.</p>
-          </div>
-
-          {/* Right Side - Form */}
-          <div className="newsletter-form">
-            <label htmlFor="email"><b>Email</b></label>
-            <input type="email" id="email" placeholder="Enter your email" />
-            <p className="privacy-text">We respect your privacy</p>
-            <button>Subscribe</button>
-          </div>
-        </div>
-      </section>
+      <Newsletter/>
 
     </div>
   );

@@ -9,6 +9,7 @@
 }
 .stats-container {
   display: flex;
+  flex-wrap: wrap; 
   justify-content: space-between;
   margin-bottom: 20px;
 }
@@ -23,7 +24,8 @@
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  width: 24%;
+  width: 48%; 
+  margin-bottom: 15px; 
 }
 
 .stat-value {
@@ -114,8 +116,13 @@
 }
 
 @media (max-width: 768px) {
-  .budget-container img {
-    max-width: 100%;
+  .stat-card {
+    width: 90%; 
+  }
+}
+@media (min-width: 769px) {
+  .stat-card {
+      width: 24%;
   }
 }
 
@@ -178,7 +185,6 @@
     flex-direction: column;
   }
 
-  .stat-card,
   .categories-container,
   .budget-container {
     width: 100%;
@@ -199,7 +205,7 @@
   .main-content {
     margin-left: 3px;
     padding: 20px;
-    width: 100%;
+    width: 90%;
   }  
   
 }

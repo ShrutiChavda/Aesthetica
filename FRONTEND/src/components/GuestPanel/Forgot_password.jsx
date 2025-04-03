@@ -16,6 +16,8 @@ import "../../assets/css/ForgotPassword.css";
 import fp from "../GuestPanel/";
 // import Navbar from "../components/Navbar";
 // import Footer from "../components/Footer";
+import Newsletter from "./newsletter";
+
 const ForgotPassword = () => {
     return (
       <div className="forgot-password-container">
@@ -38,24 +40,7 @@ const ForgotPassword = () => {
 <div className="font-sans text-black bg-white">
 <Navbar />  {/* Add Navbar Component Here */}
 
-{/* Newsletter Section */}
-<section className="newsletter">
-  <div className="newsletter-container">
-    {/* Left Side - Text */}
-    <div className="newsletter-text">
-      <h2>Subscribe to Our Newsletter</h2>
-      <p>Stay updated with our latest blog posts and design tips.</p>
-    </div>
-
-    {/* Right Side - Form */}
-    <div className="newsletter-form">
-      <label htmlFor="email"><b>Email</b></label>
-      <input type="email" id="email" placeholder="Enter your email" />
-      <p className="privacy-text">We respect your privacy</p>
-      <button>Subscribe</button>
-    </div>
-  </div>
-</section>
+<Newsletter/>
 
 
 </div>

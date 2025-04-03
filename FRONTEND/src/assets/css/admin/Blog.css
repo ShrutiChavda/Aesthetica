@@ -118,7 +118,7 @@
   .main-content {
     margin-left: 0; /* Remove left margin on smaller screens */
     padding: 10px; /* Adjust padding */
-    width: 100%; /* Take full width */
+    width: 90%; /* Take full width */
   }
 
   .blog-filters {
