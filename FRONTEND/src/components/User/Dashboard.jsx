@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Blog from "./Blog";
 function Dashboard() {
   return (
-    <div>Dashboard</div>
+    <div className="font-sans text-black bg-white">
+    <Blog/>
+    </div>
   )
 }
 

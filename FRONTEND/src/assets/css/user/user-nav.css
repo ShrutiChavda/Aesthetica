@@ -27,6 +27,7 @@
 .navbar-menu1 {
   display: flex;
   align-items: center;
+  z-index: 1000;
 }
 
 .navbar-nav1 {
