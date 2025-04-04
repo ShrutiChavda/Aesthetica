@@ -6,6 +6,7 @@ import blog2 from '../../assets/images/uBlog1.png';
 import blog3 from '../../assets/images/uBlog2.png';
 import blog4 from '../../assets/images/uBlog3.png';
 import blog5 from '../../assets/images/uBlog4.png';
+
 function Blog() {
   return (
     <div className="App">
