@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Navbar from './UserNav';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../../assets/css/user/room.css';
-
+import room from "../../assets/images/room.png";
 function Room() {
   const [dimensions, setDimensions] = useState({ length: '', width: '', height: '' });
 
@@ -22,7 +22,7 @@ function Room() {
         <h2 className="room-title">Room Measurement</h2>
         <div className="room-content">
           <div className="room-image">
-            <img src="/assets/images/room.jpg" alt="Room" />
+            <img src={room} alt="Room" />
           </div>
           <div className="room-form">
             <h3 className="form-title">Room Dimensions</h3>

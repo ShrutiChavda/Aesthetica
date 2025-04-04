@@ -51,7 +51,7 @@ function UserNav() {
           </div>
 
           <div className="navbar-icons1">
-            <NavLink to="/user/profile">
+            <NavLink to="/user/settings">
               <i className="bi bi-person-circle"></i>
             </NavLink>
             <a href="#"><i className="bi bi-bell"></i></a>

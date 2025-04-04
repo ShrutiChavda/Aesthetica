@@ -52,6 +52,7 @@ function App() {
         <Route path="/admin/settings" element={<AdminSettings />} />
         <Route path="/admin/logout" element={<AdminLogout />} />
 
+        {/* User Routes */}
         <Route path="/user/index" element={<UserDashboard />} />
         <Route path="/user/blog" element={<UserBlog />} />
         <Route path="/user/style" element={<UserStyle />} />

@@ -5,9 +5,9 @@ import Topbar from "./topbar.jsx";
 import p1 from "../../assets/images/profile.png";
 
 function Settings() {
-  const [firstName, setFirstName] = useState('Shruti');
-  const [lastName, setLastName] = useState('Chavda');
-  const [email, setEmail] = useState('john@example.com');
+  const [firstName, setFirstName] = useState('Rutika');
+  const [lastName, setLastName] = useState('Vaghasiya');
+  const [email, setEmail] = useState('rvaghasiya328@rku.ac.in');
   const [bio, setBio] = useState('');
 
   const handleSave = () => {

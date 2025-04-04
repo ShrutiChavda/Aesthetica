@@ -117,3 +117,23 @@
     font-size: 0.8em;
   }
 }
+
+@media (max-width: 285px) {
+  .design-blog-container {
+    font-family: sans-serif;
+    padding: 20px;
+    width: 80%;
+  }
+  .post {
+  
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 200px;
+  }
+  .post-content{
+    padding: 20px;
+    width: 166px;
+  }
+
+}
