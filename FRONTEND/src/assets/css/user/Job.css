@@ -1,62 +1,110 @@
 .job-listings-container {
-    font-family: sans-serif;
-    padding: 20px;
+  font-family: sans-serif;
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+.job-listings-title {
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #1e3a8a;
+  font-weight: 600;
+}
+
+.job-listings {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.job-listing {
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 30px;
+  background-color: white;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-sizing: border-box;
+  transition: transform 0.2s ease;
+  height: 230px;
+}
+
+.job-listing:hover {
+  transform: translateY(-4px);
+}
+
+.job-title {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #2d3748;
+}
+
+.job-location,
+.job-type,
+.job-experience {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-size: 0.9em;
+  color: #4a5568;
+}
+
+.job-location i,
+.job-type i,
+.job-experience i {
+  margin-right: 8px;
+  font-size: 1em;
+  color: #4a5568;
+}
+
+.view-details {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 15px;
+  color: #3182ce;
+  text-decoration: none;
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+.view-details i {
+  margin-left: 6px;
+  color: #3182ce;
+}
+
+.view-details:hover {
+  text-decoration: underline;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+  .job-listings {
+    justify-content: center;
   }
-  
+}
+
+@media (max-width: 768px) {
   .job-listings-title {
     font-size: 2em;
-    margin-bottom: 20px;
-    text-align: center;
   }
-  
-  .job-listings {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+}
+
+
+
+@media (max-width: 480px) {
+  .job-listings-title {
+    font-size: 1.5em;
   }
-  
+
   .job-listing {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 15px;
   }
-  
-  .job-title {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-  }
-  
-  .job-location,
-  .job-type,
-  .job-experience {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
-    font-size: 0.9em;
-    color: #666;
-  }
-  
-  .job-location i,
-  .job-type i,
-  .job-experience i {
-    margin-right: 8px;
-    font-size: 1.1em;
-  }
-  
+
   .view-details {
-    display: inline-flex;
-    align-items: center;
-    margin-top: 15px;
-    color: #007bff;
-    text-decoration: none;
-    font-size: 0.9em;
+    font-size: 0.85em;
   }
-  
-  .view-details i {
-    margin-left: 5px;
-  }
-  
-  .view-details:hover {
-    text-decoration: underline;
-  }
+}
