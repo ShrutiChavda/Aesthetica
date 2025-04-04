@@ -113,7 +113,7 @@ body, html {
 
 .nav-buttons {
   display: flex;
-  gap: 10px;
+  gap: 0px;
   margin-left: auto;
 }
 
