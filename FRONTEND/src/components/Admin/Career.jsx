@@ -45,7 +45,7 @@ function Career() {
                 <td>New York</td>
                 <td>Jan 15, 2025</td>
                 <td><span className="new-applications">12 New</span></td>
-                <td><span className="active">Active</span></td>
+                <td><span className="active11">Active</span></td>
                 <td>
                 <button className="edit-btn">
                     <i className="bi bi-pencil-square"></i> {/* Edit icon */}
@@ -61,7 +61,7 @@ function Career() {
                 <td>London</td>
                 <td>Jan 10, 2025</td>
                 <td><span className="new-applications">8 New</span></td>
-                <td><span className="active">Active</span></td>
+                <td><span className="active11">Active</span></td>
                 <td>
                 <button className="edit-btn">
                     <i className="bi bi-pencil-square"></i> {/* Edit icon */}

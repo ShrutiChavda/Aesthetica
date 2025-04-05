@@ -1,7 +1,11 @@
 /* Settings.css */
 
 .settings-container {
-    padding: 20px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   }
   
   .settings-header {

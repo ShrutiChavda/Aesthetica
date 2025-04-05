@@ -1,14 +1,42 @@
 import { useState } from "react";
-import { Button } from "../ui/button";
-import { Card, CardContent } from "../ui/card";
-import { Input } from "../ui/input";
+import { register } from "../../services/authService";  // Import register API function
 import Navbar from "../Navbar";
-import { Mail, Phone, MapPin, Menu, X, Instagram, Youtube, Linkedin, Twitter } from "lucide-react";
 import "../../assets/css/admin/register.css";
 import Newsletter from "./newsletter";
 
-
 function Register() {
+  const [userData, setUserData] = useState({
+    username: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+    role: "user", // Default role
+  });
+
+  const [error, setError] = useState("");
+  const [success, setSuccess] = useState("");
+
+  const handleChange = (e) => {
+    setUserData({ ...userData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (userData.password !== userData.confirmPassword) {
+      setError("Passwords do not match!");
+      return;
+    }
+
+    try {
+      const response = await register(userData);
+      setSuccess(response.data.message);
+      setError("");
+    } catch (err) {
+      setError(err.response?.data?.message || "Registration failed!");
+    }
+  };
+
   return (
     <div className="font-sans text-black bg-white">
       <Navbar />
@@ -16,30 +44,29 @@ function Register() {
         <h1 className="register-title">Register</h1>
         <p className="register-subtitle">Create a new account to explore the world of interior design</p>
 
-        <form className="register-form">
+        <form className="register-form" onSubmit={handleSubmit}>
           <div className="form-group">
-            <label htmlFor="fullName">Full Name</label>
-            <input type="text" id="fullName" placeholder="Enter your full name" />
-            <small>Please provide your full name</small>
+            <label>Full Name</label>
+            <input type="text" name="username" placeholder="Enter your full name" value={userData.username} onChange={handleChange} required />
           </div>
 
           <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input type="email" id="email" placeholder="Enter your email" />
-            <small>We'll send a verification link to this email</small>
+            <label>Email</label>
+            <input type="email" name="email" placeholder="Enter your email" value={userData.email} onChange={handleChange} required />
           </div>
 
           <div className="form-group">
-            <label htmlFor="password">Password</label>
-            <input type="password" id="password" placeholder="Enter a password" />
-            <small>Password must be at least 8 characters</small>
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Enter a password" value={userData.password} onChange={handleChange} required />
           </div>
 
           <div className="form-group">
-            <label htmlFor="confirmPassword">Confirm Password</label>
-            <input type="password" id="confirmPassword" placeholder="Re-enter your password" />
-            <small>Passwords must match</small>
+            <label>Confirm Password</label>
+            <input type="password" name="confirmPassword" placeholder="Re-enter your password" value={userData.confirmPassword} onChange={handleChange} required />
           </div>
+
+          {error && <p style={{ color: "red" }}>{error}</p>}
+          {success && <p style={{ color: "green" }}>{success}</p>}
 
           <button type="submit" className="register-button">Register</button>
         </form>
@@ -49,8 +76,7 @@ function Register() {
         </div>
       </div>
 
-      <Newsletter/>
-
+      <Newsletter />
     </div>
   );
 }

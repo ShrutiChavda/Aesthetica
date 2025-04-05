@@ -28,7 +28,7 @@ function Blog() {
           <div className="post">
             <img src={blog3} alt="Post 1" className="post-image" />
             <div className="post-content">
-              <h3>Small Space Solutions: Maximizing Your Home</h3>
+              <h3>Small Space Solutions: Maximizing Home</h3>
               <p>Discover clever ways to make the most of limited space with these expert tips.</p>
               <div className="post-meta">
                 <p>5 min read</p>

@@ -6,25 +6,19 @@ import "../../assets/css/LandingPage.css";
 import "../../assets/css/about.css";
 import Navbar from "../Navbar";
 import Newsletter from "./newsletter";
+import about from "../../assets/images/about.png";
+import team1 from "../../assets/images/team1.png";
+import team2 from "../../assets/images/team2.png";
+import team3 from "../../assets/images/team3.png";
 
 const About = () => {
   return (
     <div className="font-sans text-black bg-white">
-            <Navbar />  {/* Add Navbar Component Here */}
-
-      {/* Hero Section */}
-
-      {/* <div className="image-container">
-          <img
-                src={`../src/assets/images/4.png`}
-                className="image"
-              />
-          </div> */}
-      {/* About Us Section */}
+            <Navbar />  
       <section className="about-us">
         <div className="about-content">
           <img
-            src={`../../src/assets/images/about.png`}
+            src={about}
             alt={`Interior Design`}
             className="about-image"
           />
@@ -51,7 +45,7 @@ const About = () => {
           <Card className="team-card">
             <CardContent>
               <img
-                src="../../src/assets/images/team1.png"
+                src={team1}
                 alt="Architect"
                 className="team-image"
               />
@@ -65,7 +59,7 @@ const About = () => {
           <Card className="team-card">
             <CardContent>
               <img
-                src="../../src/assets/images/team2.png"
+                src={team2}
                 alt="Developer"
                 className="team-image"
               />
@@ -79,7 +73,7 @@ const About = () => {
           <Card className="team-card">
             <CardContent>
               <img
-                src="../../src/assets/images/team3.png"
+                src={team3}
                 alt="Project Manager"
                 className="team-image"
               />

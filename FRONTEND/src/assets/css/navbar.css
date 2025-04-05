@@ -121,7 +121,7 @@ body, html {
 
 @media (max-width: 429px) {
   .sn, .rg {
-    padding: 1px 4px;
+    padding: 6px 10px;
     font-size: 0.7rem;
   }
   .navbar ul li {

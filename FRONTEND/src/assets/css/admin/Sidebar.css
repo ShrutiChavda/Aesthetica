@@ -156,10 +156,10 @@
 }
 
 .active {
-  background-color: #ffffff;
+  /* background-color: #ffffff;
   color: #ffffff;
   padding: 5px 10px;
-  border-radius: 5px;
+  border-radius: 5px; */
 }
 
 .submenu li a.active {

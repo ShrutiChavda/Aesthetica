@@ -7,7 +7,7 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../assets/css/LandingPage.css";
-import sofa from "../../assets/images/sofa.png";  //Images of Featured products
+import Sofa from "../../assets/images/Sofa.png";
 import table from "../../assets/images/table.png";
 import rug from "../../assets/images/rug.png";
 import mirror from "../../assets/images/mirror.jpg";
@@ -32,7 +32,7 @@ import Newsletter from "./newsletter";
 const Blog = () => {
 
   const products = [
-    { id: 1, name: "Elegance Sofa Set", price: "₹84550", img: sofa },
+    { id: 1, name: "Elegance Sofa Set", price: "₹84550", img: Sofa },
     { id: 2, name: "Luxury Coffee Table", price: "₹8500", img: table },
     { id: 3, name: "Soft Shaggy Rug", price: "₹2000", img: rug },
     { id: 4, name: "Stunning Wall Mirror", price: "₹3500", img: mirror },

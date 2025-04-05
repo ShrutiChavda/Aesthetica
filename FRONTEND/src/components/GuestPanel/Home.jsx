@@ -9,6 +9,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../../assets/css/LandingPage.css";
 import "../../assets/css/Slideshow.css";
+import img1 from "../../assets/images/6.png";
+import img2 from "../../assets/images/5.png";
+import s1 from "../../assets/images/1.png";
+import s2 from "../../assets/images/2.png";
+import s3 from "../../assets/images/3.png";
+import s4 from "../../assets/images/4.png";
 import logo from "../../assets/images/logo.png";
 import logo1 from "../../assets/images/logo1.png";
 import { Link } from "react-router-dom";
@@ -34,25 +40,45 @@ const Slideshow = () => {
 
       {/* Slideshow */}
       <div className="slideshow-container">
-        <Slider {...settings}>
-          {[1, 2, 3, 4].map((num) => (
-            <div key={num}>
-              <img
-                src={`../src/assets/images/${num}.png`}
-                alt={`Interior ${num}`}
-                className="slide-image"
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
+  <Slider {...settings}>
+    <div>
+      <img
+        src={s1}
+        alt="Interior 1"
+        className="slide-image"
+      />
+    </div>
+    <div>
+      <img
+        src={s2}
+        alt="Interior 2"
+        className="slide-image"
+      />
+    </div>
+    <div>
+      <img
+        src={s3}
+        alt="Interior 3"
+        className="slide-image"
+      />
+    </div>
+    <div>
+      <img
+        src={s4}
+        alt="Interior 4"
+        className="slide-image"
+      />
+    </div>
+  </Slider>
+</div>
+
 
       {/* Gallery Section */}
       <div className="gallery-container">
-        <img src={`../src/assets/images/5.png`} alt={`Image 1`} />
-        <img src={`../src/assets/images/6.png`} alt={`Image 2`} />
-        <img src={`../src/assets/images/5.png`} alt={`Image 3`} />
-        <img src={`../src/assets/images/6.png`} alt={`Image 4`} />
+        <img src={img1} alt={`Image 1`} />
+        <img src={img2} alt={`Image 2`} />
+        <img src={img1} alt={`Image 3`} />
+        <img src={img2} alt={`Image 4`} />
       </div>
 
       {/* Services Section */}

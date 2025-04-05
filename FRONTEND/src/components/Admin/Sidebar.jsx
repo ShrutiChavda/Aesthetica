@@ -3,6 +3,7 @@ import { NavLink, useLocation } from "react-router-dom";
 import "../../assets/css/admin/Sidebar.css";
 import Logo from "../../assets/images/logo.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
+import profile from "../../assets/images/profile.png";
 
 function Sidebar() {
   const [isSidebarActive, setIsSidebarActive] = useState(false);
@@ -46,7 +47,7 @@ function Sidebar() {
         </div>
 
         <div className="profile-container">
-          <img src="../src/assets/images/profile.png" alt="User Profile" className="profile-image" />
+          <img src={profile} alt="User Profile" className="profile-image" />
           <div>
             <h3 className="profile-name">Vaghasiya Rutika</h3>
             <p className="profile-title">Senior Admin</p>

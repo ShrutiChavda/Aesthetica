@@ -47,7 +47,9 @@
   font-weight: 500;
   transition: color 0.3s ease;
 }
-
+.nav-link1.active {
+  font-weight: 600;
+}
 .nav-link1:hover {
   color: #007bff;
 }
@@ -141,7 +143,7 @@
 
   .navbar-nav1 {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .nav-item1 {

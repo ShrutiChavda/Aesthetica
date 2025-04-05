@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import Newsletter from "./newsletter";
 import Navbar from "../Navbar";
-import "../../assets/css/Gallery.css"; // Custom CSS
+import "../../assets/css/gallery.css"; // Custom CSS
 import i1 from "../../assets/images/i1.jpg";
 import i2 from "../../assets/images/i2.jpg";
 import i3 from "../../assets/images/i3.jpg";

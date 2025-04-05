@@ -13,6 +13,7 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 600px;
+    align-self: center;
   }
   
   .profile-settings h3 {
@@ -95,7 +96,7 @@
   
   .form-group:nth-child(3) > input,
   .form-group:nth-child(4) > input {
-    width: calc(50% - 7.5px);
+    width: calc(98% - 7.5px)
   }
   
   .save-changes-btn {
@@ -136,7 +137,7 @@
   
     .form-group:nth-child(3) > input,
     .form-group:nth-child(4) > input {
-      width: 100%;
+      width: 95%;
       margin-bottom: 15px;
     }
   }
