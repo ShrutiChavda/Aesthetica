@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { logout } from "../../services/authService";
 import { NavLink, useLocation } from "react-router-dom";
 import "../../assets/css/admin/Sidebar.css";
 import Logo from "../../assets/images/logo.png";
@@ -6,6 +8,17 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import profile from "../../assets/images/profile.png";
 
 function Sidebar() {
+  const navigate = useNavigate();
+
+  const handleLogout = async () => {
+    try {
+      await logout(); // destroys session
+      navigate("/login"); // redirect to login page
+    } catch (err) {
+      console.error("Admin logout failed:", err);
+    }
+  };
+
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   const [isCareerOpen, setIsCareerOpen] = useState(false);
   const location = useLocation();
@@ -36,7 +49,10 @@ function Sidebar() {
         ☰
       </button>
 
-      <section id="sidebar" className={`sidebar ${isSidebarActive ? "active" : ""}`}>
+      <section
+        id="sidebar"
+        className={`sidebar ${isSidebarActive ? "active" : ""}`}
+      >
         {isSidebarActive && (
           <button className="closeBtn" onClick={toggleSidebar}>
             ☰
@@ -57,22 +73,42 @@ function Sidebar() {
         <br />
         <ul>
           <li>
-            <NavLink to="/admin/index" end className={({ isActive }) => (isActive ? "active" : "")} onClick={hideSidebar}>
+            <NavLink
+              to="/admin/index"
+              end
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={hideSidebar}
+            >
               <i className="bi bi-house-door"></i> Dashboard
             </NavLink>
           </li>
           <li>
-            <NavLink to="/admin/blog" end className={({ isActive }) => (isActive ? "active" : "")} onClick={hideSidebar}>
+            <NavLink
+              to="/admin/blog"
+              end
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={hideSidebar}
+            >
               <i className="bi bi-pencil-square"></i> Blog Management
             </NavLink>
           </li>
           <li>
-            <NavLink to="/admin/budget" end className={({ isActive }) => (isActive ? "active" : "")} onClick={hideSidebar}>
+            <NavLink
+              to="/admin/budget"
+              end
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={hideSidebar}
+            >
               <i className="bi bi-cash-stack"></i> Budget Management
             </NavLink>
           </li>
           <li>
-            <NavLink to="/admin/room" end className={({ isActive }) => (isActive ? "active" : "")} onClick={hideSidebar}>
+            <NavLink
+              to="/admin/room"
+              end
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={hideSidebar}
+            >
               <i className="bi bi-building"></i> Room Projects
             </NavLink>
           </li>
@@ -80,7 +116,9 @@ function Sidebar() {
           <li className={`career-menu ${isCareerOpen ? "open" : ""}`}>
             <NavLink
               to="/admin/career"
-              className={({ isActive }) => (isActive || isJobApplicationActive ? "active" : "")}
+              className={({ isActive }) =>
+                isActive || isJobApplicationActive ? "active" : ""
+              }
               onClick={handleCareerClick}
             >
               <i className="bi bi-briefcase"></i> Careers
@@ -100,16 +138,27 @@ function Sidebar() {
           </li>
 
           <li>
-            <NavLink to="/admin/settings" end className={({ isActive }) => (isActive ? "active" : "")} onClick={hideSidebar}>
+            <NavLink
+              to="/admin/settings"
+              end
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={hideSidebar}
+            >
               <i className="bi bi-gear"></i> Settings
             </NavLink>
           </li>
-
+          
           <li>
-            <NavLink to="/admin/logout" end className={({ isActive }) => (isActive ? "active" : "")} onClick={hideSidebar}>
-              <i className="bi bi-box-arrow-right"></i> Logout
+            <NavLink
+              to="/"
+              end
+              className={({ isActive }) => (isActive ? "active" : "")}
+              onClick={handleLogout}
+            >
+                  <i className="bi bi-box-arrow-right"></i> Logout
             </NavLink>
           </li>
+
         </ul>
       </section>
     </div>

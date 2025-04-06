@@ -27,18 +27,54 @@ router.post('/login', async (req, res) => {
   });
 });
 
-router.get('/logout', (req, res) => {
-  req.session.destroy();
-  res.json({ message: 'Logged out' });
+router.post("/logout", (req, res) => {
+  req.session.destroy(err => {
+    if (err) {
+      console.error("Logout error:", err);
+      return res.status(500).json({ message: "Logout failed" });
+    }
+    res.clearCookie("connect.sid"); // Clear session cookie
+    return res.status(200).json({ message: "Logged out" });
+  });
 });
 
-router.get('/get-user', (req, res) => {
-    console.log("SESSION:", req.session);
-    if (req.session.user) {
-      res.json({ user: req.session.user });
-    } else {
-      res.status(401).json({ message: 'Unauthorized' });
+const requireAuth = (req, res, next) => {
+  if (!req.session.userId) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+  next();
+};
+
+// router.get('/get-user', (req, res) => {
+//     console.log("SESSION:", req.session);
+//     if (req.session.user) {
+//       res.json({ user: req.session.user });
+//     } else {
+//       res.status(401).json({ message: 'Unauthorized' });
+//     }
+//   });
+
+router.get("/get-user", async (req, res) => {
+  if (!req.session.user) {
+    return res.status(401).json({ message: "Unauthorized" });
+  }
+
+  console.log("Session in get-user:", req.session); // ✅ Now inside
+  try {
+    const user = await User.findById(req.session.user.id).select("-password");
+    console.log("Fetched user:", user); // ✅ Now inside
+
+    if (!user) {
+      return res.status(404).json({ message: "User not found" });
     }
-  });
+
+    return res.json({ user });
+  } catch (err) {
+    console.error("Get User Error:", err);
+    return res.status(500).json({ message: "Server Error" });
+  }
+});
+
+
   
 module.exports = router;

@@ -13,13 +13,14 @@ import logo from "../../assets/images/logo.png";
 import logo1 from "../../assets/images/logo1.png";
 import { Link } from "react-router-dom";
 import "../../assets/css/ForgotPassword.css";
-import fp from "../GuestPanel/";
 // import Navbar from "../components/Navbar";
 // import Footer from "../components/Footer";
 import Newsletter from "./newsletter";
 
 const ForgotPassword = () => {
     return (
+       <div className="font-sans text-black bg-white">
+            <Navbar />
       <div className="forgot-password-container">
         <h2 className="forgot-title">Forgot Password</h2>
         
@@ -34,6 +35,8 @@ const ForgotPassword = () => {
           <Link to="/login">Back to Login</Link>
         </div>
       </div>
+      </div>
+
     );
 };
 

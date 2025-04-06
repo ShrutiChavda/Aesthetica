@@ -7,6 +7,7 @@ import Career from "../src/components/GuestPanel/Career";
 import Contact from "../src/components/GuestPanel/Contact";
 import Login from "../src/components/GuestPanel/Login";
 import Register from "../src/components/GuestPanel/Register";
+import ForgotPassword from "../src/components/GuestPanel/Forgot_password";
 import Footer from "../src/components/Footer";
 
 // Admin Routes
@@ -41,6 +42,7 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
         
           {/* Admin Routes */}
         <Route path="/admin/index" element={<AdminDashboard />} />

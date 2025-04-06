@@ -27,6 +27,9 @@ const Login = () => {
       setError(err.response?.data?.message || "Login failed!");
     }
   };
+  const handleForgotPassword = () => {
+    navigate("/forgot-password");
+  };
 
   return (
     <div className="font-sans text-black bg-white">
@@ -44,7 +47,7 @@ const Login = () => {
             <input type="password" name="password" placeholder="Enter your password" value={userData.password} onChange={handleChange} required />
           </div>
           <div className="button-group">
-            <button type="button" className="forgot-password">Forgot Password?</button>
+            <button type="button"  onClick={handleForgotPassword} className="forgot-password">Forgot Password?</button>
             <button type="submit" className="login-button">Login</button>
           </div>
           {error && <p style={{ color: "red" }}>{error}</p>}

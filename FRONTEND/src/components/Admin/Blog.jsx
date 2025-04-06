@@ -1,15 +1,15 @@
-import React from 'react';
-import "../../assets/css/admin/Blog.css"; 
+import React from "react";
+import "../../assets/css/admin/Blog.css";
 import Sidebar from "./Sidebar.jsx";
 import Topbar from "./topbar.jsx";
-import 'bootstrap-icons/font/bootstrap-icons.css';
+import "bootstrap-icons/font/bootstrap-icons.css";
 function Blog() {
   return (
     <div className="main-content">
       <Sidebar />
       <div>
         <Topbar />
-        <div className="blog-management-container"> 
+        <div className="blog-management-container">
           <div className="blog-header">
             <h2>Blog Posts</h2>
             <button className="new-post-btn"> + New Post </button>
@@ -17,7 +17,11 @@ function Blog() {
           <p className="blog-description">Manage your blog content</p>
 
           <div className="blog-filters">
-            <input type="text" placeholder="Search posts..." className="search-input" />
+            <input
+              type="text"
+              placeholder="Search posts..."
+              className="search-input"
+            />
             <select className="category-filter">
               <option value="">All Categories</option>
             </select>
@@ -42,14 +46,16 @@ function Blog() {
                 <td>Modern Interior Design Trends 2025</td>
                 <td>Interior Design</td>
                 <td>Sarah Johnson</td>
-                <td><span className="published">Published</span></td>
+                <td>
+                  <span className="published">Published</span>
+                </td>
                 <td>Jan 15, 2025</td>
                 <td>
                   <button className="edit-btn">
                     <i className="bi bi-pencil-square"></i> {/* Edit icon */}
                   </button>
                   <button className="delete-btn">
-                  <i className="bi bi-trash"></i> {/* Delete icon */}
+                    <i className="bi bi-trash"></i> {/* Delete icon */}
                   </button>
                 </td>
               </tr>
@@ -57,14 +63,16 @@ function Blog() {
                 <td>Luxury Bedroom Designs</td>
                 <td>Decoration</td>
                 <td>Mike Wilson</td>
-                <td><span className="draft">Draft</span></td>
+                <td>
+                  <span className="draft">Draft</span>
+                </td>
                 <td>Jan 12, 2025</td>
                 <td>
                   <button className="edit-btn">
-                  <i className="bi bi-pencil-square"></i> {/* Edit icon */}
+                    <i className="bi bi-pencil-square"></i> {/* Edit icon */}
                   </button>
                   <button className="delete-btn">
-                  <i className="bi bi-trash"></i> {/* Delete icon */}
+                    <i className="bi bi-trash"></i> {/* Delete icon */}
                   </button>
                 </td>
               </tr>
@@ -82,7 +90,7 @@ function Blog() {
               <button className="page-btn">Next</button>
             </div>
           </div>
-          <div className='blank'></div>
+          <div className="blank"></div>
         </div>
       </div>
     </div>

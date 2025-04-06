@@ -33,6 +33,7 @@ function Dashboard() {
         return res.json();
       })
       .then(data => {
+        console.log("Fetched user:", data);
         setUser(data.user);
       })
       .catch(err => {
@@ -40,6 +41,7 @@ function Dashboard() {
         navigate("/login");
       });
   }, [navigate]);
+  
 
   const handleChange = (e) => {
     setDimensions({ ...dimensions, [e.target.name]: e.target.value });
@@ -59,12 +61,11 @@ function Dashboard() {
 
   return (
     <div className="font-sans text-black bg-white">
-      {/* 👋 Welcome message */}
-      {user && (
+      {/* {user && (
         <h2 className="welcome-user" style={{ padding: "20px", fontSize: "24px", fontWeight: "bold", color: "#444" }}>
-          Welcome, {user.name}!
+          Welcome, {user.username}!
         </h2>
-      )}
+      )} */}
 
       <Blog />
 

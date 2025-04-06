@@ -15,9 +15,7 @@ app.use(express.json());
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 
 // Ensure a session secret is properly set
-const sessionSecret = process.env.SESSION_SECRET || "default_secret";
-
-
+// const sessionSecret = process.env.SESSION_SECRET || "default_secret";
 // app.use(session({
 //     secret: process.env.SESSION_SECRET || "default_secret",
 //     resave: false,
@@ -33,19 +31,15 @@ const sessionSecret = process.env.SESSION_SECRET || "default_secret";
 //     }
 //   }));
 app.use(session({
-    secret: sessionSecret,
-    resave: false,
-    saveUninitialized: false,
-    store: MongoStore.create({ mongoUrl: mongoURI }),
-    cookie: {
-      httpOnly: true,
-      maxAge: 1000 * 60 * 60 * 24,
-      sameSite: 'lax',
-      secure: false
-    }
-  }));
-  
-
+  secret: process.env.SESSION_SECRET,
+  resave: false,
+  saveUninitialized: false,
+  store: MongoStore.create({
+          mongoUrl: mongoURI,
+          collectionName: "sessions"
+        }),
+  cookie: { maxAge: 86400000 }
+}));
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
     .then(() => console.log("✅ MongoDB Connected"))

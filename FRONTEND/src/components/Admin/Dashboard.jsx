@@ -1,13 +1,35 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import "../../assets/css/admin/index.css";
 import Sidebar from "./Sidebar.jsx";
 import Topbar from "./topbar.jsx";
 import chart from "../../assets/images/chart.png";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 function Dashboard() {
-  
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/auth/get-user", {
+      credentials: "include",
+    })
+      .then(res => {
+        if (!res.ok) throw new Error("Unauthorized");
+        return res.json();
+      })
+      .then(data => {
+        console.log("Fetched admin:", data);
+        setUser(data.user);
+      })
+      .catch(err => {
+        console.error("Error fetching admin:", err);
+      });
+  }, []);
   return (    
     <div className="main-content">
+      {/* {user && (
+  <h2 className="welcome-user" style={{ padding: "20px", fontSize: "24px", fontWeight: "bold", color: "#444" }}>
+    Welcome, {user.username}!
+  </h2>
+)} */}
     <Sidebar />
     <div>
       <Topbar/>
