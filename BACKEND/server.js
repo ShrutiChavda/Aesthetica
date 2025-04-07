@@ -14,22 +14,6 @@ const mongoURI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/aesthetica"
 app.use(express.json());
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
 
-// Ensure a session secret is properly set
-// const sessionSecret = process.env.SESSION_SECRET || "default_secret";
-// app.use(session({
-//     secret: process.env.SESSION_SECRET || "default_secret",
-//     resave: false,
-//     saveUninitialized: false,
-//     store: MongoStore.create({
-//       mongoUrl: mongoURI,
-//       collectionName: "sessions"
-//     }),
-//     cookie: {
-//       secure: false,
-//       httpOnly: true,
-//       maxAge: 24 * 60 * 60 * 1000
-//     }
-//   }));
 app.use(session({
   secret: process.env.SESSION_SECRET,
   resave: false,
@@ -42,8 +26,8 @@ app.use(session({
 }));
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log("✅ MongoDB Connected"))
-    .catch((err) => console.log("❌ Error connecting to MongoDB: ", err));
+    .then(() => console.log("MongoDB Connected"))
+    .catch((err) => console.log("Error connecting to MongoDB: ", err));
 
 app.use('/auth', authRoutes);
 app.get('/', (req, res) => {
