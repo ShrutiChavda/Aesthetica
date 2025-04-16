@@ -5,10 +5,10 @@ import Topbar from "./topbar.jsx";
 import chart from "../../assets/images/chart.png";
 import 'bootstrap-icons/font/bootstrap-icons.css';
 function Dashboard() {
-  const [user, setUser] = useState(null);
+  const [admin, setAdmin] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/auth/get-user", {
+    fetch("http://localhost:5000/auth1/get-admin", {
       credentials: "include",
     })
       .then(res => {
@@ -17,7 +17,7 @@ function Dashboard() {
       })
       .then(data => {
         console.log("Fetched admin:", data);
-        setUser(data.user);
+        setAdmin(data.admin);
       })
       .catch(err => {
         console.error("Error fetching admin:", err);
@@ -25,9 +25,9 @@ function Dashboard() {
   }, []);
   return (    
     <div className="main-content">
-      {/* {user && (
+      {/* {admin && (
   <h2 className="welcome-user" style={{ padding: "20px", fontSize: "24px", fontWeight: "bold", color: "#444" }}>
-    Welcome, {user.username}!
+    Welcome, {admin.username}!
   </h2>
 )} */}
     <Sidebar />

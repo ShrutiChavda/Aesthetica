@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../../services/authService";
+import { logout1 } from "../../services/authServiceAdmin";
 import { NavLink, useLocation } from "react-router-dom";
 import "../../assets/css/admin/Sidebar.css";
 import Logo from "../../assets/images/logo.png";
@@ -12,7 +12,7 @@ function Sidebar() {
 
   const handleLogout = async () => {
     try {
-      await logout(); // destroys session
+      await logout1(); // destroys session
       navigate("/login"); // redirect to login page
     } catch (err) {
       console.error("Admin logout failed:", err);

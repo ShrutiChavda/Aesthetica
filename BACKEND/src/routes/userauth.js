@@ -18,7 +18,7 @@ router.post('/login', async (req, res) => {
   }
 
   req.session.user = { id: user._id, role: user.role };
-  const redirectTo = user.role === 'admin' ? '/admin/index' : '/user/index';
+  const redirectTo = user.role === 'user' ? '/user/index' : '/user/index';
 
   res.json({
     message: 'Logged in successfully',
@@ -56,7 +56,7 @@ const requireAuth = (req, res, next) => {
 
 router.get("/get-user", async (req, res) => {
   if (!req.session.user) {
-    return res.status(401).json({ message: "Unauthorized" });
+    return res.status(401).json({ message: "Unauthorized" });a
   }
 
   console.log("Session in get-user:", req.session); // ✅ Now inside
