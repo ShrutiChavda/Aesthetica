@@ -6,11 +6,12 @@ const session = require('express-session');
 const MongoStore = require('connect-mongo'); 
 const authRoutes = require('./src/routes/userauth');
 const authRoutess = require('./src/routes/adminauth');
+const blogRoutes = require('./src/routes/blogs');
 
 const app = express();
 
 const PORT = 5000;
-const mongoURI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/aesthetica ";
+const mongoURI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/aesthetica";
 
 app.use(express.json());
 app.use(cors({ origin: "http://localhost:3000", credentials: true }));
@@ -33,6 +34,13 @@ mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
 app.use('/auth', authRoutes);
 
 app.use('/auth1', authRoutess);
+
+app.use('/blogs', blogRoutes);
+app.use('/api/styles', require('./src/routes/styles'));
+app.use('/api/budgets', require('./src/routes/budgets'));
+app.use('/api/measures', require('./src/routes/measures'));
+app.use('/api/careers', require('./src/routes/careers'));
+app.use('/api/applicants', require('./src/routes/applicants'));
 
 app.get('/', (req, res) => {
     res.send('<h1>Server is running!</h1><p>MongoDB Connected</p>');

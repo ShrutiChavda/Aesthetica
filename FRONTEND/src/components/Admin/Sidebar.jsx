@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink, useLocation } from "react-router-dom";
 import { logout1 } from "../../services/authServiceAdmin";
-import { NavLink, useLocation } from "react-router-dom";
 import "../../assets/css/admin/Sidebar.css";
 import Logo from "../../assets/images/logo.png";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -9,16 +8,7 @@ import profile from "../../assets/images/profile.png";
 
 function Sidebar() {
   const navigate = useNavigate();
-
-  const handleLogout = async () => {
-    try {
-      await logout1(); // destroys session
-      navigate("/login"); // redirect to login page
-    } catch (err) {
-      console.error("Admin logout failed:", err);
-    }
-  };
-
+  const [admin, setAdmin] = useState({ username: "" });
   const [isSidebarActive, setIsSidebarActive] = useState(false);
   const [isCareerOpen, setIsCareerOpen] = useState(false);
   const location = useLocation();
@@ -29,6 +19,32 @@ function Sidebar() {
   useEffect(() => {
     setIsCareerOpen(isCareerActive || isJobApplicationActive);
   }, [isCareerActive, isJobApplicationActive]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/auth1/get-admin", {
+      credentials: "include",
+    })
+      .then(res => {
+        if (!res.ok) throw new Error("Unauthorized");
+        return res.json();
+      })
+      .then(data => {
+        console.log("Fetched admin:", data);
+        setAdmin(data.admin);
+      })
+      .catch(err => {
+        console.error("Error fetching admin:", err);
+      });
+  }, []);
+
+  const handleLogout = async () => {
+    try {
+      await logout1();
+      navigate("/login");
+    } catch (err) {
+      console.error("Admin logout failed:", err);
+    }
+  };
 
   const toggleSidebar = () => {
     setIsSidebarActive(!isSidebarActive);
@@ -65,7 +81,7 @@ function Sidebar() {
         <div className="profile-container">
           <img src={profile} alt="User Profile" className="profile-image" />
           <div>
-            <h3 className="profile-name">Vaghasiya Rutika</h3>
+            <h3 className="profile-name">{admin.username || "Shruti Chavda"}</h3>
             <p className="profile-title">Senior Admin</p>
           </div>
         </div>
@@ -147,7 +163,7 @@ function Sidebar() {
               <i className="bi bi-gear"></i> Settings
             </NavLink>
           </li>
-          
+
           <li>
             <NavLink
               to="/"
@@ -155,10 +171,9 @@ function Sidebar() {
               className={({ isActive }) => (isActive ? "active" : "")}
               onClick={handleLogout}
             >
-                  <i className="bi bi-box-arrow-right"></i> Logout
+              <i className="bi bi-box-arrow-right"></i> Logout
             </NavLink>
           </li>
-
         </ul>
       </section>
     </div>
