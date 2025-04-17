@@ -173,3 +173,65 @@
   .blank1{
     height: 200px;
   }
+
+  /* Budget.css */
+
+.modal1 {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1000; /* Ensure the modal1 stays on top */
+  padding: 20px;
+  width: 400px;
+  max-width: 90%;
+}
+
+.modal1-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal1 form input,
+.modal1 form select,
+.modal1 form button {
+  margin-bottom: 10px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal1 form button {
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.modal1 form button:hover {
+  background-color: #45a049;
+}
+
+.modal1 button[type="button"] {
+  background-color: #f44336;
+}
+
+.modal1 button[type="button"]:hover {
+  background-color: #da190b;
+}
+
+.modal1-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999; /* Ensure the background overlay stays under the modal1 */
+}
+
+  

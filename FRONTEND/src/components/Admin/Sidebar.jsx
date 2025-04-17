@@ -81,8 +81,8 @@ function Sidebar() {
         <div className="profile-container">
           <img src={profile} alt="User Profile" className="profile-image" />
           <div>
-            <h3 className="profile-name">{admin.username || "Shruti Chavda"}</h3>
-            <p className="profile-title">Senior Admin</p>
+          <h3 className="profile-name">{admin.username}</h3>
+          <p className="profile-title">Senior Admin</p>
           </div>
         </div>
 

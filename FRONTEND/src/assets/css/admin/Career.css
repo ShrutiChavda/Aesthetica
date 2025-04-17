@@ -159,3 +159,41 @@
 .blank5 {
   height: 400px;
 }
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.4);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+}
+.career-modal {
+  background: white;
+  padding: 20px;
+  width: 400px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.career-modal input, .career-modal select {
+  margin: 10px 0;
+  padding: 8px;
+}
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+}
+.position-with-pic {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.job-pic {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}

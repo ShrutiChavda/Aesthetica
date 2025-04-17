@@ -5,6 +5,8 @@ const applicantSchema = new mongoose.Schema({
   email: String,
   position: String,
   status: { type: String, enum: ['Pending', 'Reviewed', 'Shortlisted', 'Rejected'], default: 'Pending' },
+  pic: { type: String },
+  resume: String,
   applied_at: { type: Date, default: Date.now }
 });
 

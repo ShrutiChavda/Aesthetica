@@ -82,6 +82,35 @@ router.get("/get-admin", async (req, res) => {
   }
 });
 
+router.post('/update-admin', async (req, res) => {
+  try {
+    if (!req.session.admin || req.session.admin.role !== 'admin') {
+      return res.status(401).json({ message: 'Unauthorized' });
+    }
+
+    const { firstName, lastName, email, bio } = req.body;
+    const fullName = `${firstName} ${lastName}`.trim();
+
+    const updatedAdmin = await Admin.findByIdAndUpdate(
+      req.session.admin.id,
+      {
+        username: fullName,
+        email,
+        bio
+      },
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedAdmin) {
+      return res.status(404).json({ message: 'Admin not found' });
+    }
+
+    res.json({ message: 'Admin profile updated successfully', admin: updatedAdmin });
+  } catch (error) {
+    console.error('Error updating admin:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
 
   
 module.exports = router;

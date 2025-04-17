@@ -13,6 +13,7 @@ router.post('/', async (req, res) => {
   res.json({ message: 'Measurement added', measure });
 });
 
+
 router.put('/:id', async (req, res) => {
   const updated = await Measure.findByIdAndUpdate(req.params.id, req.body, { new: true });
   res.json({ message: 'Measurement updated', updated });

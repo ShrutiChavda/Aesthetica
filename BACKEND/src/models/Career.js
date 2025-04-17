@@ -9,6 +9,7 @@ const careerSchema = new mongoose.Schema({
   experience: String,
   type: { type: String, enum: ['Full-time', 'Part-time', 'Internship'] },
   status: { type: String, enum: ['Open', 'Closed'], default: 'Open' },
+  pic: { type: String },
   created_at: { type: Date, default: Date.now }
 });
 
