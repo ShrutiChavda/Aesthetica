@@ -5,7 +5,12 @@
     display: flex;
     justify-content: center;
   }
-  
+  .settings-description{
+    justify-content: center;
+    text-align: center;
+    display: flex;
+
+  }
   .profile-settings {
     background-color: #fff;
     border-radius: 8px;

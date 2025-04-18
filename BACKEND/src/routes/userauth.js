@@ -75,5 +75,33 @@ router.get("/get-user", async (req, res) => {
   }
 });
 
+router.post('/update-user', async (req, res) => {
+  try {
+    if (!req.session.user || req.session.user.role !== 'user') {
+      return res.status(401).json({ message: 'Unauthorized' });
+    }
 
+    const { firstName, lastName, email, bio } = req.body;
+    const fullName = `${firstName} ${lastName}`.trim();
+
+    const updatedUser = await User.findByIdAndUpdate(
+      req.session.user.id,
+      {
+        username: fullName,
+        email,
+        bio
+      },
+      { new: true, runValidators: true }
+    );
+
+    if (!updatedUser) {
+      return res.status(404).json({ message: 'User not found' });
+    }
+
+    res.json({ message: 'User profile updated successfully', user: updatedUser });
+  } catch (error) {
+    console.error('Error updating user:', error);
+    res.status(500).json({ message: 'Server error' });
+  }
+});
 module.exports = router;
