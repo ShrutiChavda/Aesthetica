@@ -108,3 +108,38 @@
     font-size: 0.85em;
   }
 }
+
+
+.modal5-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.modal5-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+
+.modal5-content h3 {
+  margin-top: 0;
+}
+
+.modal5-content form input,
+.modal5-content form button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 8px;
+}

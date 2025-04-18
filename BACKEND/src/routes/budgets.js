@@ -43,4 +43,30 @@ router.delete('/:id', async (req, res) => {
   }
 });
 
+// GET user budget
+router.get('/:username', async (req, res) => {
+  const budget = await Budget.findOne({ username: req.params.username });
+  res.json(budget || {});
+});
+
+// PUT user budget
+router.put('/:username', async (req, res) => {
+  const { totalBudget, categories } = req.body;
+  const updated = await Budget.findOneAndUpdate(
+    { username: req.params.username },
+    { totalBudget, categories },
+    { upsert: true, new: true }
+  );
+  res.json(updated);
+});
+
+
+router.get('/session', (req, res) => {
+  if (req.session && req.session.user) {
+    res.json({ username: req.session.user.user_name });
+  } else {
+    res.status(401).json({ error: 'Not logged in' });
+  }
+});
+
 module.exports = router;
