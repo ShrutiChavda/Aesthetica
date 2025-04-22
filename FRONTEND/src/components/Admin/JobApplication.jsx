@@ -24,9 +24,13 @@ const ApplicantModal = ({ applicant, onClose }) => {
 const EditModal = ({ applicant, onSave, onClose }) => {
   const [formData, setFormData] = useState(applicant);
 
+  useEffect(() => {
+    setFormData(applicant);
+  }, [applicant]);
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData((prevState) => ({ ...prevState, [name]: value }));
+    setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = () => {
@@ -41,27 +45,27 @@ const EditModal = ({ applicant, onSave, onClose }) => {
         <input 
           type="text" 
           name="full_name" 
-          value={formData.full_name} 
+          value={formData.full_name || ''} 
           onChange={handleChange} 
           placeholder="Full Name" 
         />
         <input 
           type="email" 
           name="email" 
-          value={formData.email} 
+          value={formData.email || ''} 
           onChange={handleChange} 
           placeholder="Email" 
         />
         <input 
           type="text" 
           name="position" 
-          value={formData.position} 
+          value={formData.position || ''} 
           onChange={handleChange} 
           placeholder="Position" 
         />
         <select 
           name="status" 
-          value={formData.status} 
+          value={formData.status || ''} 
           onChange={handleChange}
         >
           <option value="Pending">Pending</option>
@@ -83,12 +87,8 @@ function JobApplication() {
 
   useEffect(() => {
     axios.get('http://localhost:5000/applicants')
-      .then((response) => {
-        setApplications(response.data);
-      })
-      .catch((error) => {
-        console.error('Error fetching applicants:', error);
-      });
+      .then((response) => setApplications(response.data))
+      .catch((error) => console.error('Error fetching applicants:', error));
   }, []);
 
   const handleInfoClick = (applicant) => {
@@ -102,7 +102,7 @@ function JobApplication() {
   const handleDeleteClick = (id) => {
     axios.delete(`http://localhost:5000/applicants/${id}`)
       .then(() => {
-        setApplications(applications.filter(app => app._id !== id));
+        setApplications((prev) => prev.filter((app) => app._id !== id));
       })
       .catch((error) => {
         console.error('Error deleting applicant:', error);
@@ -112,9 +112,9 @@ function JobApplication() {
   const handleSaveEdit = (updatedApplicant) => {
     axios.put(`http://localhost:5000/applicants/${updatedApplicant._id}`, updatedApplicant)
       .then(() => {
-        setApplications(applications.map(app => 
-          app._id === updatedApplicant._id ? updatedApplicant : app
-        ));
+        setApplications((prev) =>
+          prev.map((app) => app._id === updatedApplicant._id ? { ...updatedApplicant } : app)
+        );
       })
       .catch((error) => {
         console.error('Error updating applicant:', error);
@@ -183,7 +183,7 @@ function JobApplication() {
             </table>
 
             <div className="pagination">
-              <p className="entries-count">Showing 1 to 3 of {applications.length} entries</p>
+              <p className="entries-count">Showing 1 to {applications.length} of {applications.length} entries</p>
               <div className="pagination-controls">
                 <button className="page-btn">Previous</button>
                 <button className="page-btn active">1</button>

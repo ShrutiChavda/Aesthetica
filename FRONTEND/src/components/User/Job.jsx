@@ -27,7 +27,7 @@ function Job() {
     data.append('email', formData.email);
     data.append('position', selectedJob.position);
     data.append('resume', formData.resume);
-    data.append('pic', ''); // Optional or leave out if not needed
+    data.append('pic', ''); 
   
     try {
       const res = await axios.post('http://localhost:5000/applicants', data, {

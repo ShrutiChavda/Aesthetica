@@ -24,10 +24,28 @@ function Career() {
 
   const departments = ['Senior Interior Designer', 'Project Management', 'Architecture'];
   const countriesWithStates = {
-    "USA": ["New York", "California", "Texas"],
-    "UK": ["London", "Manchester"],
-    "UAE": ["Dubai", "Abu Dhabi"]
+    "USA": ["New York", "California", "Texas", "Florida", "Illinois"],
+    "UK": ["England", "Scotland", "Wales", "Northern Ireland"],
+    "UAE": ["Abu Dhabi", "Dubai", "Sharjah", "Ajman", "Fujairah", "Ras Al Khaimah", "Umm Al Quwain"],
+    "Canada": ["Ontario", "Quebec", "British Columbia", "Alberta", "Manitoba"],
+    "Australia": ["New South Wales", "Victoria", "Queensland", "Western Australia", "South Australia"],
+    "India": ["Maharashtra", "Karnataka", "Tamil Nadu", "Delhi", "Uttar Pradesh"],
+    "Germany": ["Bavaria", "Berlin", "Hamburg", "Hesse", "Saxony"],
+    "France": ["Île-de-France", "Provence-Alpes-Côte d’Azur", "Nouvelle-Aquitaine", "Occitanie", "Brittany"],
+    "China": ["Guangdong", "Beijing", "Shanghai", "Zhejiang", "Sichuan"],
+    "Brazil": ["São Paulo", "Rio de Janeiro", "Bahia", "Minas Gerais", "Paraná"],
+    "Japan": ["Tokyo", "Osaka", "Hokkaido", "Kyoto", "Kanagawa"],
+    "Russia": ["Moscow", "Saint Petersburg", "Novosibirsk", "Sverdlovsk", "Tatarstan"],
+    "South Africa": ["Gauteng", "Western Cape", "KwaZulu-Natal", "Eastern Cape", "Free State"],
+    "Mexico": ["Mexico City", "Jalisco", "Nuevo León", "Puebla", "Yucatán"],
+    "Italy": ["Lombardy", "Lazio", "Campania", "Sicily", "Tuscany"],
+    "Saudi Arabia": ["Riyadh", "Jeddah", "Makkah", "Dammam", "Medina"],
+    "Indonesia": ["Jakarta", "West Java", "Central Java", "East Java", "Bali"],
+    "Nigeria": ["Lagos", "Abuja", "Kano", "Kaduna", "Rivers"],
+    "Argentina": ["Buenos Aires", "Córdoba", "Santa Fe", "Mendoza", "Salta"],
+    "Pakistan": ["Punjab", "Sindh", "Khyber Pakhtunkhwa", "Balochistan", "Islamabad"]
   };
+  
 
   const fetchCareers = async () => {
     const res = await axios.get('http://localhost:5000/careers');
